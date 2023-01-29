@@ -22,7 +22,7 @@ nav {
   font-size: 20px;
 }
 
-form {
+.search-form{
   display: flex;
   align-items: center;
   background-color: rgba(140, 135, 135, 0.228);
@@ -30,11 +30,11 @@ form {
   margin-right: 25%;
   
 }
-input[type="text"]::placeholder{
+.search::placeholder{
   color: rgba(204, 199, 208, 0.721);
   font-size: 20px;
 }
-input[type="text"] {
+.search{
   color: rgba(211, 184, 184, 0.908);
   height: 50px;
   width: 35vh;
@@ -45,14 +45,14 @@ input[type="text"] {
   font-size: 16px;
 }
 
-input[type="text"]:focus{
+.search:focus{
   outline-width: 0;
   color: rgba(232, 224, 224, 0.711);
 
 }
 
 
-button[type="submit"] {
+.search-button{
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -79,7 +79,9 @@ button[type="submit"] {
   display: none;
 }
 
-
+.hamburger{
+  display: none;
+}
 @media screen and (max-width : 768px) {
   nav{
     position: relative;
@@ -101,6 +103,7 @@ button[type="submit"] {
     transform: translate(-5%, -50%);
   font-size: 29px;
     color: #B75CFF;
+    display: inline-block;
   }
   .menuTimes{
     color: #B75CFF;

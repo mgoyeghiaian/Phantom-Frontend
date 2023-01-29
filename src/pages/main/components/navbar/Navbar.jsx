@@ -23,10 +23,10 @@ const Navbar = () => {
         <FaTimes />
       </div>
       <div className={`nav-right ${isOpen ? 'open' : ''}`}>
-        <form>
-          <button type='submit'><div >
+        <form className='search-form'>
+          <button className='search-button' type='submit'><div >
             <FaSearch /></div> </button>
-          <input type="text" placeholder="Search items and collections" />
+          <input className='search' type="text" placeholder="Search items and collections" />
         </form>
         <Link to="#">Collections</Link>
         <Link to="#">Feature</Link>

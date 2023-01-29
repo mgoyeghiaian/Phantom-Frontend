@@ -4,7 +4,7 @@
   font-family: 'Poppins', sans-serif;}
 
 .button{
-  background: linear-gradient(214.02deg, #B75CFF 6.04%, #671AE4 92.95%);
+  background: -webkit-linear-gradient(-15deg, #B75CFF , #671AE4 );
   border-radius: 10px;
   border-color: transparent;
   color: #fff;
