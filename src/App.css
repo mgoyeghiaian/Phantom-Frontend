@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 *{
-  background: linear-gradient(113.49deg, #181E41 -30.3%, #181E41 58.12%);
-  text-align: center;
+  font-family: 'Poppins', sans-serif;}
+
+.button{
+  background: linear-gradient(214.02deg, #B75CFF 6.04%, #671AE4 92.95%);
+  border-radius: 10px;
+  border-color: transparent;
   color: #fff;
+  font-size: 20px;
+  line-height: 30px;
 }

@@ -1,1 +1,144 @@
-/*Navebar Section For The Main page  Styleing*/
+nav {
+  display: flex;
+  align-items: center;
+  padding: 2%;
+  background-color: transparent;
+}
+
+.nav-left {
+  margin: 0% 25% 0 5%;
+  display: flex;
+}
+.nav-right{
+  gap:15%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: rgb(255, 254, 254);
+  font-size: 20px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  background-color: rgba(140, 135, 135, 0.228);
+  border-radius: 10px;
+  margin-right: 25%;
+  
+}
+input[type="text"]::placeholder{
+  color: rgba(204, 199, 208, 0.721);
+  font-size: 20px;
+}
+input[type="text"] {
+  color: rgba(211, 184, 184, 0.908);
+  height: 50px;
+  width: 35vh;
+  border: none;
+  background-color: transparent;
+  padding: 1px;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+input[type="text"]:focus{
+  outline-width: 0;
+  color: rgba(232, 224, 224, 0.711);
+
+}
+
+
+button[type="submit"] {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 1px;
+  margin-left: 10px;
+  font-size: 16px;
+  color: rgb(168, 165, 165);
+}
+
+.Login{
+  width :182px;
+  height: 50px;
+}
+
+.Login:hover{
+  cursor: pointer;
+}
+
+.Login:active{
+  width :179px;
+  height: 46px;
+}
+.menuTimes{
+  display: none;
+}
+
+
+@media screen and (max-width : 768px) {
+  nav{
+    position: relative;
+    padding: 0;
+    margin: 3%;
+  }
+  .line {
+    width: 30px;
+    height: 3px;
+    background: #B75CFF;
+    margin: 5px
+  }
+
+  .hamburger{
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 75%;
+    transform: translate(-5%, -50%);
+  font-size: 29px;
+    color: #B75CFF;
+  }
+  .menuTimes{
+    color: #B75CFF;
+    position: absolute;
+    right: 5%;
+    top: 75%;
+    font-size: 29px;
+    transform: translate(-5%, -50%);
+  }
+
+.nav-right{
+margin: 92.8% 0 0 9.8%;
+border: 5px solid #170e1b4b;
+background-color: #131836;
+  position: fixed;
+  gap:0%;
+  height: 50vh;
+width: 75%;
+flex-direction: column;
+clip-path:circle( 0px at 90% -10%);
+transition: all 1s ease-out;
+}
+
+.nav-right.open{
+clip-path:circle( 800px at 90% -10%);
+transition: all 1s ease-out;
+}
+
+.nav-right form{
+  margin-left: 25%;
+  width: 95%;
+}
+
+.hamburger.open{
+display: none;
+}
+
+.menuTimes.open{
+  display: inline-block;
+}
+}
