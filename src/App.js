@@ -4,7 +4,7 @@ import Main from './pages/main/Main'
 import Login from './pages/Login/Login'
 import Dashboard from './pages/dashboard/Dashboard'
 
-
+import Collection from './pages/main/components/collection/Collection';
 
 function App() {
   return (
@@ -13,10 +13,12 @@ function App() {
         <Route path='/' element={<Main />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/dashboard' element={<Dashboard />}></Route>
-
+        
       </Routes>
     </BrowserRouter>
+   
   );
+   
 }
 
 export default App;
