@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
+*{
+font-family: 'Poppins', sans-serif;}
 
-body {
-  background: linear-gradient(113.49deg, #181E41 -30.3%, #181E41 58.12%);
-  color: #fff;
-  
+.button{
+background: -webkit-linear-gradient(-15deg, #B75CFF , #671AE4 );
+border-radius: 10px;
+border-color: transparent;
+color: #fff;
+font-size: 20px;
+line-height: 30px;
 }

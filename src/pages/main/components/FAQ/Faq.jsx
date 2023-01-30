@@ -3,7 +3,7 @@ import './Faq.css'
 
 function Faq() {
   return (
-    <div>Faq</div>
+    <div></div>
   )
 }
 
