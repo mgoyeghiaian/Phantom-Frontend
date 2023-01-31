@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { HiHome } from "@react-icons/all-files/hi/HiHome";
-import { Outlet, Navigate } from "react-router-dom";
 
 import './login.css'
 
@@ -66,10 +65,10 @@ function Login() {
             <button className="login-button button" type="submit">Log In</button>
           </form>
         </section>
-      </div>   <div className="login-error">
-        {errorMessage && <p>{errorMessage}</p>}
+        <div className="login-error ">
+          {errorMessage && <p>{errorMessage}</p>}
+        </div>
       </div>
-    
     </>
 
   )
