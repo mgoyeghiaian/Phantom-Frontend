@@ -1,62 +1,77 @@
-import { useRef, useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { HiHome } from "@react-icons/all-files/hi/HiHome";
+import { Outlet, Navigate } from "react-router-dom";
+
 import './login.css'
 
-function Login(props) {
-  const userRef = useRef();
-  const errRef = useRef();
-
-  const [user, setUser] = useState('');
-  const [pwd, setPwd] = useState('');
-  const [errMsg, setErrMsg] = useState('');
-
-  useEffect(() => {
-    userRef.current.focus();
-  }, [])
-
-  useEffect(() => {
-    setErrMsg('');
-  }, [user, pwd])
+function Login() {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const isValid = checkCredentials(user, pwd);
-    if (isValid) {
-      window.location.href = "/dashboard";
-    } else {
-      setErrMsg("Invalid username or password");
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await fetch("http://localhost:3030/login", {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password }),
+      });
+      if (!response.ok) {
+        setErrorMessage("error")
+        return;
+      }
+
+      const { token, error } = await response.json();
+
+
+      if (error === 'username') {
+        setErrorMessage('Incorrect username');
+        return;
+      }
+
+      if (error === 'password') {
+        setErrorMessage('Incorrect password');
+        return;
+      }
+      localStorage.setItem("token", token);
+      window.location.href = `/dashboard`;
+    } catch (error) {
+
+      setErrorMessage('Error logging in. Please try again.')
     }
 
   }
-  const checkCredentials = (user, pwd) => {
-    // logic to check if username and password exists in database
-    return true;
-  }
-
   return (
     <>
       <div className="login-body">
         <section className="login-card">
-          <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
-          <h1>Log In</h1>
-          <Link to={'/'}>
-            <button className="Home-button" ><HiHome /></button>
-          </Link>
+
+          <div className="login-header">
+            <Link to={'/'} className='Home-button '>
+              <HiHome />
+            </Link>
+            <h1>Log In</h1>
+          </div>
           <form onSubmit={handleSubmit} className='login-form'>
             <label htmlFor="username">Username:</label>
-            <input type="text" id="username" ref={userRef} autoComplete="off"
-              onChange={(e) => setUser(e.target.value)} value={user} required />
+            <input type="text"
+              onChange={(e) => setUsername(e.target.value)} value={username} />
 
             <label htmlFor="password">Password:</label>
-            <input type="password" id="password"
-              onChange={(e) => setPwd(e.target.value)} value={pwd} required />
-            <button className="login-button">Log In</button>
+            <input type="password" value={password}
+              onChange={(e) => setPassword(e.target.value)} />
+            <button className="login-button button" type="submit">Log In</button>
           </form>
         </section>
+      </div>   <div className="login-error">
+        {errorMessage && <p>{errorMessage}</p>}
       </div>
+    
     </>
+
   )
 }
 

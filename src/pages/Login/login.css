@@ -3,7 +3,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40vh;
 }
 .login-card{
   background-color: rgba(0, 0, 0, 0.397);
@@ -11,13 +10,22 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 350px;
+  margin-top: 35px;
+  padding: 5px 5px 75px 5px ;
+  height: 200px;
+  width: 300px;
   border-radius: 15px;
-  padding: 10px 0 5rem 0 ;
-height: 20vh;
 }
 
-.login-body h1{
+.login-header{
+  display: flex;
+align-items: center;
+margin-top: 15%;
+justify-content: center;
+align-self:flex-start;
+}
+
+.login-header h1{
   background: linear-gradient(214.02deg, #B75CFF 6.04%, #671AE4 92.95%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -28,6 +36,7 @@ height: 20vh;
   display: flex;
   flex-direction: column;
   gap: 3px;
+  width: 95%;
 }
 
 .login-button{
@@ -45,14 +54,12 @@ background-color: #a9a0b159;
 border-radius: 15px;
 height: 24px;
 margin-bottom: 4%;
-
 }
 
 .login-form input:focus{
   outline-width: 0;
   color: rgba(247, 237, 237, 0.932);
   background-color:#a9a0b196; ;
-
 }
 
 .login-form label{
@@ -61,39 +68,44 @@ margin-bottom: 4%;
 }
 
 .login-button:active{
-  width : 265px;
+  width : 270px;
   height: 35px;
 }
+
+
 
 .Home-button{
   background-color: transparent;
   border: none;
   color: #671AE4;
   font-size: 30px;
-  cursor: pointer;
-  position:absolute;
-  left: 41%;
-  top: 7.5%;
+  cursor:pointer;
+  margin-right: 90px;
 }
+
+.Home-button:hover{
+  color: #6200ffb3;
+  font-size: 29.5px;
+}
+
+
 
 .Home-button:active{
-  font-size: 25px;
+  font-size: 27px;
 }
 
+.login-error{
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.531);
+  color: rgb(247, 0, 0);
+  border-radius: 15px;
+  width: 330px;
+  margin-left: 41.5%;
+  }
+
 @media screen and (max-width : 768px) {
- 
-  .Home-button{
-    left: 18%;
-    top: 3%;
-  }
-
-  .login-card{
-    padding: 10px 0 7rem 0 ;
-  height: 20vh;
-  }
-
-  .login-body h1{
-
-margin-top: 15%;  }
-
+  .login-error{
+    margin-left:15%;
+    }
+  
 }
