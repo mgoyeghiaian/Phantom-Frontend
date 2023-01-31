@@ -12,8 +12,7 @@ let data=[{
   id:1,
   imgSrc:Img1,
   type:'sport',
-  creator:'Ahmad',
-  
+  creator:'Ahmad', 
   current:0.05,
   name:'Yellow Painting'
 },
