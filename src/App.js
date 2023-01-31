@@ -5,7 +5,7 @@ import Login from './pages/Login/Login'
 import Dashboard from './pages/dashboard/Dashboard'
 import PrivateRoute from "./pages/main/Privetrout";
 
-
+import Collection from './pages/main/components/collection/Collection';
 
 function App() {
   return (
@@ -16,7 +16,9 @@ function App() {
         <Route path='/dashboard' element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
+   
   );
+   
 }
 
 export default App;
