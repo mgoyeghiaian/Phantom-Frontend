@@ -3,7 +3,8 @@ import React from 'react'
 import './Collection.css'
 import Data from './static/indexx'
 import { useState } from 'react'
-<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+
+
 
 function Collection() {
   const [collection, setCollection] = useState('art')
@@ -13,14 +14,14 @@ function Collection() {
     e.preventDefault();
     setCollection(e.target.name)
   }
-  
+
   return (
     <>
     <div className='collection'>
     Collection Dashboard<br/><p className='desc'>Lorem ipsum dolor sit amet, consectetur <br/>adipiscing elit.</p>
-    <button className=' button coll-btn'  >Add</button>
+  
+    < button className=' button coll-btn' >Add</button>
     
-   
     <div className='navbar-nfts'>
       <button name='art' className='btn1' onClick={selectedCollection} >Art</button>
       <button name='sport' className='btn2' onClick={selectedCollection}>Sport</button>
@@ -52,7 +53,60 @@ function Collection() {
     </div>
    
   }
-   </div>
+  </div>
+  <div>
+    <br/>
+<form >
+  <legend className='legendd'>Add NFTS</legend>
+  <br/>
+  <label>Enter an NFT name: <br/><input type='text'></input></label>
+  <br/>
+  <label>Designer name: <br/><input type='text'></input></label>
+  <br/>
+  <label>Current Bid: <br/><input type='text'></input></label>
+  <br/>
+  <label>NFT Image: <br/><input type='file' id="imgg"></input></label>
+  <br/>
+  <label for="type">Choose a type for the NFT:</label>
+  <br/>
+<select id="typee" name="typee">
+  <option value="art">art</option>
+  <option value="sport">sport</option>
+  <option value="photography">photography</option>
+  <option value="pattern">pattern</option>
+</select>
+<br/>
+<br/>
+<input type="submit" value="Submit" id="submit"></input>
+<hr/>
+  </form>
+  </div>
+  <div>
+  <form >
+  <legend className='legendd'>Update NFTS</legend>
+  <br/>
+  <label>Enter an NFT name: <br/><input type='text'></input></label>
+  <br/>
+  <label>Designer name: <br/><input type='text'></input></label>
+  <br/>
+  <label>Current Bid: <br/><input type='text'></input></label>
+  <br/>
+  <label>NFT Image: <br/><input type='file' id="imgg"></input></label>
+  <br/>
+  <label for="type">Choose a type for the NFT:</label>
+  <br/>
+<select id="typee" name="typee">
+  <option value="art">art</option>
+  <option value="sport">sport</option>
+  <option value="photography">photography</option>
+  <option value="pattern">pattern</option>
+</select>
+<br/>
+<br/>
+<input type="submit" value="Update" id="submit"></input>
+
+  </form>
+  </div>
    </>
   )
   

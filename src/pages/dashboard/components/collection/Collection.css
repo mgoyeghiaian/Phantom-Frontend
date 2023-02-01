@@ -227,3 +227,28 @@ display: flex;
        /* margin-bottom: 8px; */
     }
 }
+.legendd{
+    color:white;
+    font-size: 30px;
+    font-weight: bolder;
+}
+form{
+margin-left: 10%;
+font-size: 25px;
+line-height: 30px;
+color: rgba(255, 255, 255, 0.673);
+}
+#typee{
+    height:35px;
+    font-size: 20px;
+}
+#imgg{
+    height:35px;
+    font-size: 20px;
+}
+#submit{
+    height:35px;
+    font-size: 20px;
+    align-items: center;
+   
+}
