@@ -1,1 +1,106 @@
 /*Only Main Styleing For the whole login page*/
+.login-body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.login-card{
+  background-color: rgba(0, 0, 0, 0.397);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 35px;
+  padding: 5px 5px 75px 5px ;
+  height: 200px;
+  width: 300px;
+  border-radius: 15px;
+}
+
+.login-header{
+  display: flex;
+align-items: center;
+margin-top: 15%;
+justify-content: center;
+align-self:flex-start;
+}
+
+.login-header h1{
+  background: linear-gradient(214.02deg, #B75CFF 6.04%, #671AE4 92.95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  }
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 95%;
+}
+
+.login-button{
+  background: -webkit-linear-gradient(-15deg, #B75CFF , #671AE4 );
+  border-radius: 10px;
+  border-color: transparent;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.login-form input{
+color: rgba(232, 224, 224, 0.637);
+background-color: #a9a0b159;
+border-radius: 15px;
+height: 24px;
+margin-bottom: 4%;
+}
+
+.login-form input:focus{
+  outline-width: 0;
+  color: rgba(247, 237, 237, 0.932);
+  background-color:#a9a0b196; ;
+}
+
+.login-form label{
+  color:  #B75CFF ;
+  font-size: 19px;
+}
+
+.login-button:active{
+  width : 270px;
+  height: 35px;
+}
+
+
+
+.Home-button{
+  background-color: transparent;
+  border: none;
+  color: #671AE4;
+  font-size: 30px;
+  cursor:pointer;
+  margin-right: 90px;
+}
+
+.Home-button:hover{
+  color: #6200ffb3;
+  font-size: 29.5px;
+}
+
+
+
+.Home-button:active{
+  font-size: 27px;
+}
+
+.login-error p{
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.531);
+  color: rgb(247, 0, 0);
+  border-radius: 15px;
+  width: 300px;
+  margin: top 15px;
+  }
+

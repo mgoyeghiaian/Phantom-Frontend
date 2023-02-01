@@ -14,8 +14,7 @@ import Footer from './components/footer/Footer.jsx'
 function Main() {
   return (
     <div className='main' >
-      <h1>Main</h1>
-      <section id='navbar'><Navbar /></section>
+      <Navbar />
       <section id='home'><Home /></section>
       <section id='sponsored'><Sponsored /></section>
       <section id='about'> <About /></section>

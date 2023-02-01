@@ -1,1 +1,45 @@
 /*Home Section For The Main page  Styleing*/
+.hero-body {
+  margin-top: 40px;
+  color: white;
+  display: flex;
+gap: 10px;
+  justify-content:space-around;
+  
+
+
+}
+.hero-button{
+width: 400px;
+}
+
+
+.hero-header {
+  font-size: 40px;
+  flex-wrap: wrap;
+
+}
+.hero-text,
+.hero-numbers p {
+  opacity: 0.5;
+}
+.inside-div{
+  width: 500px;
+}
+.hero-numbers{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .inside-div {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .inside-div .hero-text {
+    display: none;
+  }
+}
