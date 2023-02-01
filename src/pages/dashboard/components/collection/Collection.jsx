@@ -13,9 +13,7 @@ function Collection() {
     e.preventDefault();
     setCollection(e.target.name)
   }
-   
   
-
   return (
     <>
     <div className='collection'>
