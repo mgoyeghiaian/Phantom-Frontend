@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .login-card{
   background-color: rgba(0, 0, 0, 0.397);
@@ -94,18 +95,12 @@ margin-bottom: 4%;
   font-size: 27px;
 }
 
-.login-error{
+.login-error p{
   text-align: center;
   background-color: rgba(0, 0, 0, 0.531);
   color: rgb(247, 0, 0);
   border-radius: 15px;
-  width: 330px;
-  margin-left: 41.5%;
+  width: 300px;
+  margin: top 15px;
   }
 
-@media screen and (max-width : 768px) {
-  .login-error{
-    margin-left:15%;
-    }
-  
-}

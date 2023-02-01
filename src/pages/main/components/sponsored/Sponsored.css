@@ -1,1 +1,19 @@
 /*Sponserd Section For The Main page  Styleing*/
+.sponsord-body{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.sponsord-body img{
+  width:12%;
+}
+@media screen and (max-width : 768px) {
+  .sponsord-body img{
+    width:35%;
+  }
+
+  
+}
