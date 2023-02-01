@@ -3,7 +3,7 @@ import './Cta.css'
 
 function Cta() {
   return (
-    <div>Cta</div>
+    <div></div>
   )
 }
 
