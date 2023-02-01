@@ -13,20 +13,16 @@ function Collection() {
     e.preventDefault();
     setCollection(e.target.name)
   }
-    const alertt=props=>{
-      <div>
-        <button onClick={props.click}>test</button>
-        </div>
-    }
+   
   
 
   return (
     <>
-    <body>
-    <div className='collection'>Collection Dashboard<br/><p className='desc'>Lorem ipsum dolor sit amet, consectetur <br/>adipiscing elit.</p>
-    <button className=' button coll-btn' click={()=>alertt()} >Add</button>
+    <div className='collection'>
+    Collection Dashboard<br/><p className='desc'>Lorem ipsum dolor sit amet, consectetur <br/>adipiscing elit.</p>
+    <button className=' button coll-btn'  >Add</button>
     
-    </div>
+   
     <div className='navbar-nfts'>
       <button name='art' className='btn1' onClick={selectedCollection} >Art</button>
       <button name='sport' className='btn2' onClick={selectedCollection}>Sport</button>
@@ -50,16 +46,15 @@ function Collection() {
             <div className='names'>
             {item.name}
             </div>
-            <br/>
-            <button className=' button collection-button' click={()=>alertt()} >Update</button>
-            <button className=' button collection-button' click={()=>alertt()} >Delete</button>
+            <button className=' button collection-button'  >Update</button>
+            <button className=' button collection-button' >Delete</button>
             </div>
       )
     })}
     </div>
    
   }
-  </body>
+   </div>
    </>
   )
   

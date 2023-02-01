@@ -64,6 +64,7 @@ let data=[{
 
   return (
     <>
+    <div className='N-body'>
     <div className='collection'>Collection<br/><p className='desc'>Lorem ipsum dolor sit amet, consectetur <br/>adipiscing elit.</p></div>
     <div className='navbar-nfts'>
       <button name='art' className='btn1' onClick={selectedCollection} >Art</button>
@@ -98,6 +99,7 @@ let data=[{
     </div>
    
   }
+  </div>
    </>
   )
   
