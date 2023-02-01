@@ -14,12 +14,7 @@ const Navbar = () => {
           <img src={logo} alt="logo" />
         </a>
       </div>
-      <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(!isOpen)}>
-        <HiMenu />
-      </div>
-      <div className={`menuTimes ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(!isOpen)}>
-        <FaTimes />
-      </div>
+    
       <div className={`nav-right ${isOpen ? 'open' : ''}`}>
         <form className='search-form'>
           <button className='search-button' type='submit'><div >
@@ -31,6 +26,12 @@ const Navbar = () => {
         <Link to="#faq">FAQ</Link>
         <Link to={'/login'}>
           <button className='button Login'> Login</button></Link>
+      </div>
+      <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(!isOpen)}>
+        <HiMenu />
+      </div>
+      <div className={`menuTimes ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(!isOpen)}>
+        <FaTimes />
       </div>
     </nav>
   );
