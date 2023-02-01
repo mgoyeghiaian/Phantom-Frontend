@@ -2,7 +2,7 @@ import React from 'react'
 import './Collection.css'
 import Data from './static/indexx'
 import { useState } from 'react'
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 
 function Collection() {
   const [collection, setCollection] = useState('art')
@@ -12,6 +12,12 @@ function Collection() {
     e.preventDefault();
     setCollection(e.target.name)
   }
+    const alertt=props=>{
+      <div>
+        <button onClick={props.click}>test</button>
+        </div>
+    }
+  
 
   return (
     <>
@@ -28,7 +34,7 @@ function Collection() {
     {Data.map((item,index)=>{
       return(
         <div className='pics'key={index}>
-          <img className ="nft-img" src={item.imgSrc}/> 
+          <img className ="nft-img" src={item.imgSrc} /> 
           <br/>
           <div className='creator'>
            <p className='firstpart-creator'> @{item.creator}</p>
@@ -40,7 +46,7 @@ function Collection() {
             {item.name}
             </div>
             <br/>
-            <button className=' button collection-button '>Place a bid</button>
+            <button className=' button collection-button' click={()=>alertt()} >Place a bid</button>
             </div>
           
        

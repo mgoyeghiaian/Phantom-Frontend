@@ -6,7 +6,7 @@ font-family: 'Poppins', sans-serif;}
 .button{
 background: -webkit-linear-gradient(-15deg, #B75CFF , #671AE4 );
 border-radius: 10px;
-border-color: transparent;
+/* border-color: transparent; */
 color: #fff;
 font-size: 20px;
 line-height: 30px;

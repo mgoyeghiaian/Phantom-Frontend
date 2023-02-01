@@ -20,6 +20,7 @@ function Main() {
       <section id='sponsored'><Sponsored /></section>
       <section id='about'> <About /></section>
       <section id='collection'><Collection /></section>
+      
       <section id='topcreator'><Topcreator /></section>
       <section id='faq'><FAQ /></section>
       <section id='cta'><CTA /></section>
