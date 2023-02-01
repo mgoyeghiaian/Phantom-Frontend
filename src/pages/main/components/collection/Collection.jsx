@@ -1,13 +1,12 @@
 import React from 'react'
 import './Collection.css'
-import Img1 from './images/collection2.svg'
-import Img2 from './images/collection3.svg'
-import Img3 from './images/collection5.svg'
-import Img4 from './images/Rectangle6.svg'
-
-
+import Data from './static/indexx'
+import { useState } from 'react'
+<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 
 function Collection() {
+
+  const [collection, setCollection] = useState('art')
 let data=[{
   id:1,
   imgSrc:Img1,
@@ -51,64 +50,34 @@ let data=[{
   imgSrc:Img1,
   type:'pattern',
 
-  creator:'Rasha',
-  currentbid:"current Bid",
-  current:0.05,
-  name:'Yellow Painting'
-},
-{
-  id:6,
-  imgSrc:Img2,
-  type:'pattern',
-  creatorimg:Img1,
-  creator:'Rasha',
- 
-  current:0.05,
-  name:'Yellow Painting'
-}
-
-]
-
-
-const btnfn=()=>{
-  var a=document.getElementById("btn1");
-  var b=document.getElementById("btn2");
-  var c=document.getElementById("btn3");
-  var d=document.getElementById("btn4");
-  if(a){
-    //"#"+(47).toString(16)+(52).toString(16)+(70).toString(16);;
-    a.style.backgroundColor="purple"
+  const selectedCollection = (e) => {
+    console.log(e.target.name);
+    e.preventDefault();
+    setCollection(e.target.name)
   }
-  else if(b){
-    //"#"+(47).toString(16)+(52).toString(16)+(70).toString(16);;
-    b.style.backgroundColor="blue"
-  }
-  else if(c){
-    //"#"+(47).toString(16)+(52).toString(16)+(70).toString(16);;
-    c.style.backgroundColor="blue"
-  }
-  else if(d){
-    //"#"+(47).toString(16)+(52).toString(16)+(70).toString(16);;
-    d.style.backgroundColor="blue"
-  }
-}
+    const alertt=props=>{
+      <div>
+        <button onClick={props.click}>test</button>
+        </div>
+    }
+  
 
   return (
     <>
     <div className='collection'>Collection<br/><p className='desc'>Lorem ipsum dolor sit amet, consectetur <br/>adipiscing elit.</p></div>
     <div className='navbar-nfts'>
-      <button id="btn1" className='btn1' onClick={btnfn} >Art</button>
-      <button id="btn2" className='btn2' onClick={btnfn}>Sport</button>
-      <button id="btn3" className='btn3' onClick={btnfn}>Photography</button>
-      <button id="btn4" className='btn4' onClick={btnfn}>Pattern</button>
+      <button name='art' className='btn1' onClick={selectedCollection} >Art</button>
+      <button name='sport' className='btn2' onClick={selectedCollection}>Sport</button>
+      <button name='photography' className='btn3' onClick={selectedCollection}>Photography</button>
+      <button name='pattern' className='btn4' onClick={selectedCollection}>Pattern</button>
     </div>
     {
      
       <div className='nfts'>
-    {data.map((item,index)=>{
+    {Data.map((item,index)=>{
       return(
         <div className='pics'key={index}>
-          <img className ="nft-img" src={item.imgSrc}/> 
+          <img className ="nft-img" src={item.imgSrc} /> 
           <br/>
           <div className='creator'>
            <p className='firstpart-creator'> @{item.creator}</p>
@@ -120,7 +89,7 @@ const btnfn=()=>{
             {item.name}
             </div>
             <br/>
-            <button className='button'>Place a bid</button>
+            <button className=' button collection-button' click={()=>alertt()} >Place a bid</button>
             </div>
           
        
