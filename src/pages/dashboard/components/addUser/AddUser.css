@@ -1,0 +1,135 @@
+.adduser{
+  background: rgba(0, 0, 0, 0.632);
+  color: #fff;
+  border-radius: 15px;
+  height: 120px;
+width: 100%;
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+align-items:center;
+gap: 15px;
+margin: 1px;
+}
+
+.adduser h2{
+  font-size:1.5rem;
+  margin:1%;
+  background: linear-gradient(214.02deg, #B75CFF 6.04%, #671AE4 92.95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.Home-button-dash
+{
+  display: flex;
+  font-size: 30px;
+  margin-left: 15px;
+  align-items: center;
+}
+
+.adduser-button{
+  margin-left: 5px;
+  width: 200px;
+  height: 40px;
+  cursor: pointer;
+}
+.adduser-form{
+  flex-wrap: wrap;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  text-align: center;
+  gap:5px;
+  width: auto;
+}
+
+.adduser-form label{
+  align-items: center;
+  font-weight: bolder;
+  font-size: 18px;
+  margin-right: 10px ;
+  margin-left:  10px;
+}
+.adduser-form input{
+  color: rgba(232, 224, 224, 0.637);
+  background-color: #a9a0b159;
+  border-radius: 15px;
+  height: 24px;
+  width: auto;
+  }
+  .adduser-form input::placeholder{
+color: rgba(255, 255, 255, 0.69);
+text-align: center;  }
+
+.adduser-form input:focus::placeholder{
+
+color: rgba(255, 255, 255, 0.229);
+ }
+
+  .adduser-form input:focus{
+    outline-width: 0;
+    color: rgba(255, 255, 255, 0.932);
+    background-color:#a9a0b196; ;
+  }
+
+  .error-dash{
+    display: flex;
+    font-size: 18px;
+
+    background-color: rgba(61, 55, 55, 0.703);
+    width: 250px;
+justify-content: center;
+    color: red;
+    border-radius: 15px;
+  }
+
+  .sucsess-dash{
+    display: flex;
+    font-size: 18px;
+    background-color: rgba(61, 55, 55, 0.703);
+    width: 250px;
+justify-content: center;
+    color: rgb(23, 223, 16);
+    border-radius: 15px;
+  }
+
+  @media screen and (max-width : 950px) {
+
+    .Home-button-dash
+{
+
+  margin-left: 5px;
+}
+
+    .adduser{
+      display: flex;
+      flex-direction: column;
+    height: 240px;
+    justify-content: center;
+    }
+
+    .adduser h1{
+      margin-left: 1px;
+    }
+    .adduser-form{
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      align-items: center;
+    }
+
+    .adduser-form input{
+      color: rgba(232, 224, 224, 0.637);
+      background-color: #a9a0b159;
+      width: 210px;
+      border-radius: 15px;
+      height: 24px;
+      }
+
+    div .error-dash p{
+      display: flex;
+  }
+  }
+ 
