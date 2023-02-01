@@ -91,9 +91,6 @@
 
   .navbar{
     display: flex;
-    justify-items: center;
-    justify-content: space-between;
-width: 90%;
   }
 
   .line {
@@ -118,11 +115,9 @@ width: 90%;
 
 .nav-right{
   position:sticky;
-  margin-left: 5%;
 border: 5px solid #170e1b4b;
 background-color: #111739;
 height: 400px;
-width: 380px;
 flex-direction: column;
 clip-path:circle( 0px at 90% -10%);
 transition: all 0.8s ease-out;
