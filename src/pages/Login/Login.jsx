@@ -1,6 +1,6 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { HiHome } from "@react-icons/all-files/hi/HiHome";
+import { useState } from "react";
 
 import './login.css'
 
@@ -15,34 +15,22 @@ function Login() {
     try {
       const response = await fetch("http://localhost:3030/login", {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers:( { 'Content-Type': 'application/json' }),
         body: JSON.stringify({ username, password }),
       });
       if (!response.ok) {
-        setErrorMessage("error")
-        return;
+        throw new Error(response.statusText);
       }
 
-      const { token, error } = await response.json();
+      const { token } = await response.json();
 
-
-      if (error === 'username') {
-        setErrorMessage('Incorrect username');
-        return;
-      }
-
-      if (error === 'password') {
-        setErrorMessage('Incorrect password');
-        return;
-      }
-      localStorage.setItem("token", token);
-      window.location.href = `/dashboard`;
+      localStorage.setItem('token', token);
+      window.location.href = '/dashboard';
     } catch (error) {
-
-      setErrorMessage('Error logging in. Please try again.')
+      setErrorMessage(error.message || error);
     }
 
-  }
+  };
   return (
     <>
       <div className="login-body">
@@ -66,7 +54,7 @@ function Login() {
           </form>
         </section>
         <div className="login-error ">
-          {errorMessage && <p>{errorMessage}</p>}
+          {errorMessage && <p> {errorMessage}</p>}
         </div>
       </div>
     </>
