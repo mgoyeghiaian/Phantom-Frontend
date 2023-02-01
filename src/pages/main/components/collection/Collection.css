@@ -2,25 +2,24 @@
 .collection{
     align-items: center;
     font-size: 40px;
-    color: white;
     text-align: center;
+    color: white;
 }
-
+.collection p{
+    color: rgba(255, 255, 255, 0.464);
+}
 .nfts{
   display: grid;
   gap: 40px ;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 10px;
-  height:400px;
   margin: auto auto;
   width: 80%;
    
   
 }
   .nft-img{
-
 width: 337px;
-height: 380px;
 border-radius: 10px;
 
 
@@ -162,7 +161,7 @@ display: flex;
         gap: 40px ;
         grid-template-columns: 1fr ;
         padding: 10px;
-        height:400px;
+        /* height:400px; */
         margin: auto auto;
         width: 80%;
     }
