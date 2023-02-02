@@ -7,6 +7,8 @@ import { useState } from "react";
 
 function AddUser() {
 
+
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -19,26 +21,27 @@ function AddUser() {
         headers: ({ 'Content-Type': 'application/json' }),
         body: JSON.stringify({ username, password }),
       });
-
       if (!response.ok) {
-        setErrorMessage('Username Already Exists', response);
+        setErrorMessage('Username Already Exists');
       }
       if (!username && !password) {
         setErrorMessage('Please fill the form');
+
       }
 
       if (response.ok) {
         setMessage("User added successfully")
+
+
       }
+
 
     } catch (error) {
       setErrorMessage(error.message || error);
+
     }
 
-
-
-  };
-
+  }
   return (
     <>
       <div className='adduser'>
@@ -49,7 +52,7 @@ function AddUser() {
         {errorMessage && <p className='error-dash' > {errorMessage}</p>}
         {message && <p className='sucsess-dash'>{message}</p>}
         <form onSubmit={handleSubmit} className='adduser-form'>
-          <label htmlFor="username"> Username :</label>
+          <label htmlFor="username" onsubmit="return "> Username :</label>
           <input type="text"
             onChange={(e) => setUsername(e.target.value)} value={username} placeholder='Username' />
           <label htmlFor="password">Password:</label>

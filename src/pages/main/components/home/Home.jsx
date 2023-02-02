@@ -10,7 +10,6 @@ function Home() {
           <h1 className="hero-header">
             Create, Sell & Collect Your Own Creative NFT
           </h1>
-
           <div className="hero-text">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
@@ -23,7 +22,7 @@ function Home() {
         <img src={Heroimg} />
       </div>
       <div className="hero-numbers">
-        <button className="hero-button button">Explore</button>
+        <a href="#collection"> <button className="hero-button button">Explore</button></a>
         <div className="lol">
           <div className="hero-artworks">
             <h1>37k+</h1>

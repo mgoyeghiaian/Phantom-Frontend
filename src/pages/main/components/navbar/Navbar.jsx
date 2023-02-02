@@ -14,16 +14,16 @@ const Navbar = () => {
           <img src={logo} alt="logo" />
         </a>
       </div>
-    
+
       <div className={`nav-right ${isOpen ? 'open' : ''}`}>
         <form className='search-form'>
           <button className='search-button' type='submit'><div >
             <FaSearch /></div> </button>
           <input className='search' type="text" placeholder="Search items and collections" />
         </form>
-        <Link to="#collection">Collections</Link>
-        <Link to="#featuredartworks">Feature</Link>
-        <Link to="#faq">FAQ</Link>
+        <a href="#collection">Collections</a>
+        <a href="#featuredartworks">Feature</a>
+        <a href="#faq">FAQ</a>
         <Link to={'/login'}>
           <button className='button Login'> Login</button></Link>
       </div>
