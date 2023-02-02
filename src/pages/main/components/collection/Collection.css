@@ -2,25 +2,24 @@
 .collection{
     align-items: center;
     font-size: 40px;
-    color: white;
     text-align: center;
+    color: white;
 }
-
+.collection p{
+    color: rgba(255, 255, 255, 0.464);
+}
 .nfts{
   display: grid;
   gap: 40px ;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 10px;
-  height:400px;
   margin: auto auto;
   width: 80%;
    
   
 }
   .nft-img{
-
 width: 337px;
-height: 380px;
 border-radius: 10px;
 
 
@@ -80,7 +79,7 @@ display: flex;
     font-size: 20px;
     line-height: 30px;
 }
-.button{
+.collection-button{
     width: 70%;
     height: 7%;
 }
@@ -104,6 +103,22 @@ display: flex;
     width: 350px;
     margin-left: 10%;
     
+}
+.btn1:focus{
+    background: -webkit-linear-gradient(-15deg, #B75CFF , #671AE4 );
+    border: 1px solid   #671AE4 ;
+}
+.btn2:focus{
+    background: -webkit-linear-gradient(-15deg, #B75CFF , #671AE4 );
+    border: 1px solid   #671AE4 
+}
+.btn3:focus{
+    background: -webkit-linear-gradient(-15deg, #B75CFF , #671AE4 );
+    border: 1px solid   #671AE4 
+}
+.btn4:focus{
+    background: -webkit-linear-gradient(-15deg, #B75CFF , #671AE4 );
+    border: 1px solid   #671AE4 
 }
 .btn2{
     border-radius: 10px;
@@ -138,4 +153,64 @@ display: flex;
     margin-right: 10%;
     
     
+}
+
+@media screen and (max-width: 1000px) {
+    .nfts{
+        display: grid;
+        gap: 40px ;
+        grid-template-columns: 1fr ;
+        padding: 10px;
+        /* height:400px; */
+        margin: auto auto;
+        width: 80%;
+    }
+    .btn4{
+        border-radius: 10px;
+        border-color: transparent;
+        color: #fff;
+        font-size: 15px;
+        line-height: 35px;
+        background-color:#2f3454;
+        width: 250px;
+        margin-right: 10%;
+        justify-self: flex-end;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .btn1{
+        border-radius: 10px;
+        border-color: transparent;
+        color: #fff;
+        font-size: 15px;
+        line-height: 35px;
+        background-color:#2f3454;
+        width: 250px;
+        margin-left: 10%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .btn2{
+        border-radius: 10px;
+        border-color: transparent;
+        color: #fff;
+        font-size: 15px;
+        line-height: 35px;
+        background-color:#2f3454;
+        width: 250px;
+        margin: 5px;
+        
+    }
+    .btn3{
+        border-radius: 10px;
+        border-color: transparent;
+        color: #fff;
+        font-size: 15px;
+        line-height: 35px;
+        background-color:#2f3454;
+        width: 250px;
+        margin: 5px;
+        
+    }
 }

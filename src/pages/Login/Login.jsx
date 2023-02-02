@@ -23,6 +23,7 @@ function Login() {
       }
 
       const { token } = await response.json();
+      console.log(token)
 
       localStorage.setItem('token', token);
       window.location.href = '/dashboard';

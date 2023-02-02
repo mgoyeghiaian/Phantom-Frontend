@@ -4,6 +4,7 @@ import './About.css'
 
 function About() {
   return (
+
     <div className='about-container'>
       <div className='about-img'>
         <img src={Somthing} />
@@ -23,7 +24,7 @@ function About() {
           </button>
         </div>
       </div>
-    </div>
+
   )
 }
 

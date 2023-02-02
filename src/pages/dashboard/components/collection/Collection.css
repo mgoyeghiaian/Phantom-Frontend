@@ -1,1 +1,229 @@
 /*Collection Section For The Dashboard page Styleing*/
+.collection{
+    align-items: center;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bolder;
+}
+.collection p{
+    color: rgba(255, 255, 255, 0.464);
+}
+.nfts{
+  display: grid;
+  /* gap: 40px ; */
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px;
+  /* height: 100%; */
+  margin: auto auto;
+  width: 80%;
+   
+  
+}
+  .nft-img{
+
+width: 337px;
+/* height: 380px; */
+border-radius: 10px;
+
+
+}   
+
+.pics{
+    width: 100%;
+    height: 100%;
+    background-color: #2f3454;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+
+    
+}
+.names{
+    color: white;
+    display: flex;
+    padding-left: 13%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+}
+.creator{
+display: flex;
+
+}
+.firstpart-creator{
+  padding-left: 13%;
+  color: rgba(255, 255, 255, 0.5);
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+
+}
+.secondpart-creator{
+    padding-left: 30%;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+
+}
+.coll-btn{
+    width:10%;
+    
+   /* margin-bottom: 8px; */
+}
+.bid{
+    padding-left: 50%;
+    color: white;
+    /* color: rgba(255, 255, 255, 0.5); */
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+}
+.collection-button{
+    width: 70%;
+    height: 7%;
+}
+.desc{
+    font-size: 20px;
+    color: white;
+}
+.navbar-nfts{
+    display: flex;
+    flex-direction: row;
+    /* margin: auto auto auto auto; */
+    
+}
+.btn1{
+    border-radius: 10px;
+    border-color: transparent;
+    color: #fff;
+    font-size: 20px;
+    line-height: 35px;
+    background-color:#2f3454;
+    width: 350px;
+    margin-left: 10%;
+    
+}
+.btn1:focus{
+    background: -webkit-linear-gradient(-15deg, #B75CFF , #671AE4 );
+    border: 1px solid   #671AE4 ;
+}
+.btn2:focus{
+    background: -webkit-linear-gradient(-15deg, #B75CFF , #671AE4 );
+    border: 1px solid   #671AE4 
+}
+.btn3:focus{
+    background: -webkit-linear-gradient(-15deg, #B75CFF , #671AE4 );
+    border: 1px solid   #671AE4 
+}
+.btn4:focus{
+    background: -webkit-linear-gradient(-15deg, #B75CFF , #671AE4 );
+    border: 1px solid   #671AE4 
+}
+.btn2{
+    border-radius: 10px;
+    border-color: transparent;
+    color: #fff;
+    font-size: 20px;
+    line-height: 35px;
+    background-color:#2f3454;
+    width: 350px;
+    margin: auto;
+    
+}
+.btn3{
+    border-radius: 10px;
+    border-color: transparent;
+    color: #fff;
+    font-size: 20px;
+    line-height: 35px;
+    background-color:#2f3454;
+    width: 350px;
+    margin: auto;
+    
+}
+.btn4{
+    border-radius: 10px;
+    border-color: transparent;
+    color: #fff;
+    font-size: 20px;
+    line-height: 35px;
+    background-color:#2f3454;
+    width: 350px;
+    margin-right: 10%;
+    
+    
+}
+
+@media screen and (max-width: 1000px) {
+    .nfts{
+        display: grid;
+        gap: 40px ;
+        grid-template-columns: 1fr ;
+        padding: 10px;
+        /* height:400px; */
+        margin: auto auto;
+        width: 80%;
+    }
+    .btn4{
+        border-radius: 10px;
+        border-color: transparent;
+        color: #fff;
+        font-size: 15px;
+        line-height: 35px;
+        background-color:#2f3454;
+        width: 250px;
+        margin-right: 10%;
+        justify-self: flex-end;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .btn1{
+        border-radius: 10px;
+        border-color: transparent;
+        color: #fff;
+        font-size: 15px;
+        line-height: 35px;
+        background-color:#2f3454;
+        width: 250px;
+        margin-left: 10%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .btn2{
+        border-radius: 10px;
+        border-color: transparent;
+        color: #fff;
+        font-size: 15px;
+        line-height: 35px;
+        background-color:#2f3454;
+        width: 250px;
+        margin: 5px;
+        
+    }
+    .btn3{
+        border-radius: 10px;
+        border-color: transparent;
+        color: #fff;
+        font-size: 15px;
+        line-height: 35px;
+        background-color:#2f3454;
+        width: 250px;
+        margin: 5px;
+        
+    }
+    .coll-btn{
+        width:25%;
+        
+       /* margin-bottom: 8px; */
+    }
+}

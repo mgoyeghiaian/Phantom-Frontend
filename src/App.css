@@ -4,6 +4,10 @@
 
   font-family: 'Poppins', sans-serif;
 }
+
+section{
+  margin-top: 2%;
+}
 .button{
   background: -webkit-linear-gradient(-15deg, #B75CFF , #671AE4 );
   border-radius: 12px;
