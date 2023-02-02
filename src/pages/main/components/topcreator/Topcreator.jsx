@@ -1,6 +1,6 @@
 import React from 'react'
 import './Topcreator.css'
-
+import Data from './IndexCreator';
 function TopCreator() {
   return (
  
