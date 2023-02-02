@@ -1,1 +1,24 @@
 /*Top Creators Section For The Main page  Styleing*/
+
+.Main-creator {
+    background-color: rgb(235, 9, 9);
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .Cards {
+    display: flex;
+  }
+  
+  .First-cards{
+    background-color: aqua;
+  }
+
+.Second-cards{
+    background-color: black;
+}
+.Third-cards{
+    background-color: aqua;
+}

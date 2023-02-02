@@ -1,10 +1,8 @@
-import React from 'react'
-import './Collection.css'
+import React from "react";
+import "./Collection.css";
 
 function Collection() {
-  return (
-    <div>Collection</div>
-  )
+  return <div>Collection</div>;
 }
 
-export default Collection
+export default Collection;
