@@ -1,1 +1,38 @@
 /*About Section For The Main page Styleing*/
+.about-container{
+display: grid;
+grid-template-columns: 50%  40% ;
+place-items: center;
+color: #fff;
+}
+.about-header
+{
+  display: none;
+  color: #fff;
+}
+
+.about-text p{
+  color: rgba(255, 255, 255, 0.596);
+
+}
+.about-img img{
+  width: 490px;
+  height: 600px;
+}
+
+.about-button{
+  width: 230px;
+}
+@media screen and (max-width : 768px) {.about-header
+  {
+    display: block;
+    color: #fff;
+  }
+
+  .about-container{
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%;
+    color: #fff;
+    }
+  
+}
