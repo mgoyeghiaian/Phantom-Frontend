@@ -8,7 +8,6 @@ const Data = [{
     imgSrc: Img1,
     type: 'sport',
     creator: 'Ahmad',
-
     current: 0.05,
     name: 'Yellow Painting'
 },

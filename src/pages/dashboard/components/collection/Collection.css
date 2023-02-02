@@ -163,6 +163,85 @@ display: flex;
     
 }
 
+
+.legendd{
+    color:white;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.formm{
+
+font-size: 25px;
+line-height: 30px;
+color: rgba(255, 255, 255, 0.673);
+display: flex;
+flex-direction: row;
+margin-top: 5%;
+/* justify-content: space-around; */
+
+gap:200px;
+
+
+}  
+.first-form{
+   
+    border-radius: 10px;
+    background-color: #2f3454;
+    align-items: center;
+display: flex;
+flex-direction: column;
+
+
+}
+.second-form{
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #2f3454;
+    margin-left: 40px;
+    }
+
+
+ 
+#nft-img{
+   margin-left: 170px;
+}
+#nft-imgg{
+    margin-left: 170px;
+ }
+
+
+#typee{
+    height:35px;
+    font-size: 20px;
+    width: 20%;
+}
+#imgg{
+    height:35px;
+    font-size: 20px;
+}
+#submit{
+    height:35px;
+    font-size: 20px;
+    align-items: center;
+    width: 20%;
+}
+
+#typeee{
+    height:35px;
+    font-size: 20px;
+    width: 20%;
+}
+
+#submitt{
+    height:35px;
+    font-size: 20px;
+    align-items: center;
+    width: 20%;
+}
+
+
 @media screen and (max-width: 1000px) {
     .nfts{
         display: grid;
@@ -226,29 +305,37 @@ display: flex;
         
        /* margin-bottom: 8px; */
     }
-}
-.legendd{
-    color:white;
-    font-size: 30px;
-    font-weight: bolder;
-}
-form{
-margin-left: 10%;
-font-size: 25px;
-line-height: 30px;
-color: rgba(255, 255, 255, 0.673);
-}
-#typee{
-    height:35px;
-    font-size: 20px;
-}
-#imgg{
-    height:35px;
-    font-size: 20px;
-}
-#submit{
-    height:35px;
-    font-size: 20px;
-    align-items: center;
-   
+
+    .formm{
+
+        font-size: 25px;
+        line-height: 30px;
+        color: rgba(255, 255, 255, 0.673);
+        display: flex;
+        flex-direction: column;
+        
+        }  
+        .first-form{
+            margin-left: 10%;
+        
+        
+        }
+        .second-form{
+             margin-left: 10%;
+           
+            
+            }
+
+            #typee{
+                height:35px;
+                font-size: 20px;
+                width: 20%;
+            }
+          
+            #submit{
+                height:35px;
+                font-size: 20px;
+                align-items: center;
+                width: 35%;
+            }
 }

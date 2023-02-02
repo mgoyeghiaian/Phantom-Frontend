@@ -3,9 +3,11 @@ import React from 'react'
 import './Collection.css'
 import Data from './static/indexx'
 import { useState } from 'react'
-<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+
 
 function Collection() {
+
+  
   const [collection, setCollection] = useState('art')
 
   const selectedCollection = (e) => {
@@ -14,7 +16,9 @@ function Collection() {
     setCollection(e.target.name)
   }
    
-  
+  const showdeatils=(id)=>{
+    alert("You placed a bid")
+  }
 
   return (
     <>
@@ -47,7 +51,7 @@ function Collection() {
             {item.name}
             </div>
             <br/>
-            <button className=' button collection-button'  >Place a bid</button>
+            <button className=' button collection-button' onClick={(e)=>showdeatils(item.id)} >Place a bid</button>
             
             </div>
       )
