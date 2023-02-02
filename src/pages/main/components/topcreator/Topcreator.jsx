@@ -10,12 +10,18 @@ function TopCreator() {
             {Data.map((item, index) => {
               return (
                 <div className="pics" key={index}>
-                  <img className="nft-img" src={item.bckgrndimg} />
-
                   <div className="creator">
-                    <img className="firstpart-creator" src={item.creatorimg} />
-                    <p className="secondpart-creator">{item.name}</p>
-                    <p className="secondpart-creator">{item.descrip}</p>
+                    <div className="backgroundcreator">
+                      <img className="nft-img" src={item.bckgrndimg} alt="" />
+                    </div>
+                    <div className="image-creator"> 
+
+                    <img 
+                      src={item.creatorimg}
+                      alt=""/>
+                      </div>
+                    <p className= "centerp" >{item.name}</p>
+                    <p className= "centerp">{item.descrip}</p>
                   </div>
 
                   <button className=" button collection-button ">

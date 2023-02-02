@@ -8,22 +8,22 @@ import photo3 from "./creatorimg/photo3.svg";
 const Data = [
   {
     id: 1,
-    creatorimgr: img1,
-    bckgrndimg: photo1,
+    creatorimgr: photo1,
+    bckgrndimg: img1,
     name: "Mgo",
     descrip: "very nice",
   },
   {
     id: 2,
-    creatorimg: img2,
-    bckgrndimg: photo2,
+    creatorimg: photo2,
+    bckgrndimg: img2,
     name: "Mgo",
     descrip: "very nice",
   },
   {
     id: 3,
-    creatorimg: img3,
-    bckgrndimg: photo3,
+    creatorimg: photo3,
+    bckgrndimg: img3,
     name: "Mgo",
     descrip: "very nice",
   },
