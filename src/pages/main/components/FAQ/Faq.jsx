@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Faq.css";
 import faquestions from "./faq";
 function Faq() {const [showmore, Setshow] = useState();
@@ -15,10 +15,6 @@ function Faq() {const [showmore, Setshow] = useState();
           return (
             <div className="faq-item" key={index}>
               <p>{item.question}</p>
-              <hr />
-              <div className={`hiddenContent ${showmore ? "show" : ""}`}>
-                {item.answer}
-              </div>
               <div className="faq-answer">
                 <button
                   className="faq-button"
@@ -27,6 +23,9 @@ function Faq() {const [showmore, Setshow] = useState();
                 >
                   +
                 </button>
+              </div>
+              <div className={`hiddenContent ${showmore ? "show" : ""}`}>
+                {item.answer} <hr />
               </div>
             </div>
           );
