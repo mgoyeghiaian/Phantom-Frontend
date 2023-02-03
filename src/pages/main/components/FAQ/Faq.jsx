@@ -1,51 +1,26 @@
 import React from "react";
 import "./Faq.css";
+import faquestions from "./faq";
 function Faq() {
-  const Faquestions = [
-    {
-      id: 1,
-      question: "How do i get paid?",
-      Answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      id: 2,
-      question:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit?",
-      Answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      id: 3,
-      question:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit?",
-      Answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      id: 4,
-      question:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit?",
-      Answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      id: 5,
-      question:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit?",
-      Answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      id: 6,
-      question:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit?",
-      Answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-  ];
+  return (
+    <div className="faq-container">
+      <div className="faq-title">
+        <h1>Frequently Asked <br/> Questions</h1>
+        <p>Wanna Ask Something?</p>
+      </div>
+      <div className="faq-qa">
+        {faquestions.map((item, index) => {
+          return (
+            <div className="faq-item" key={index}>
+              <p>{item.question}</p>
+              <hr/>
+              <p className="faq-answer">{item.answer}</p>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
 }
-// function Faq() {
-//   return (
-//     <div className="faq-container">
-//       <h1>Frequently Asked Questions</h1>
-//       <p>Wanna Ask Something?</p>
-//     </div>
-//   );
-// }
 
 export default Faq;

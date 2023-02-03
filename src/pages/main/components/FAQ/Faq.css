@@ -1,1 +1,33 @@
 /*FAQ Section For The Main page  Styleing*/
+.faq-container {
+  margin-top: 80px;
+
+}
+.faq-title {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+
+
+}
+.faq-title h1{
+    font-size: 40px;
+    font-weight: bold;
+    
+}
+.faq-title p{
+    opacity: 0.5;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.faq-qa{
+  color: white;
+display: grid;
+opacity: 0.5;
+grid-template-columns: 40% 40%;
+grid-template-rows: 1fr 1fr 1fr;
+justify-items: center;
+justify-content: center;
+
+
+}
