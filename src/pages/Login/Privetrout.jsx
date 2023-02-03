@@ -1,13 +1,16 @@
-/*import React from "react"
+import React from "react"
 import { Navigate } from "react-router-dom"
+import Cookies from 'js-cookie';
 
 function Privetrout({ children }) {
-  const token = localStorage.getItem('token');
+
+  const token = Cookies.get('jwt_auth')
+
   if (token) {
     return children;
 
   }
-  return <Navigate to="/" />
-
+  return alert('only admins are allowed to access this page.'), <Navigate to="/login" />
 }
-export default Privetrout*/
+
+export default Privetrout

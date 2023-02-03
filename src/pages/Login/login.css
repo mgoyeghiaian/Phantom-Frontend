@@ -88,7 +88,6 @@ font-weight: bold;
 .Home-button:active{
   font-size: 37px;
   color: red;
-  border: 1px solid red;
 }
 
 .login-error p{
