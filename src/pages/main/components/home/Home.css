@@ -4,7 +4,7 @@
   color: white;
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 60% 20%;
+  grid-template-rows: 50% 20%;
   width: 90%;
   margin: 0 auto;
   margin-top: 40px;
@@ -16,6 +16,7 @@
   width: 80%;
   height: 50px;
   cursor: pointer;
+
 }
 
 .hero-header {
