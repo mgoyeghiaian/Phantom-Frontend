@@ -1,4 +1,4 @@
-import React from "react"
+/*import React from "react"
 import { Navigate } from "react-router-dom"
 
 function Privetrout({ children }) {
@@ -10,4 +10,4 @@ function Privetrout({ children }) {
   return <Navigate to="/" />
 
 }
-export default Privetrout
+export default Privetrout*/
