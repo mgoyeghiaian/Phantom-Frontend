@@ -1,7 +1,7 @@
 import React from "react";
 import "./Faq.css";
 import faquestions from "./faq";
-function Faq() {
+function Faq() {const [showmore, Setshow] = useState();
   return (
     <div className="faq-container">
       <div className="faq-title">
