@@ -24,7 +24,7 @@
   color: white;
 display: grid;
 opacity: 0.5;
-grid-template-columns: 40% 40%;
+grid-template-columns: 30% 30%;
 grid-template-rows: 1fr 1fr 1fr;
 justify-items: center;
 justify-content: center;
