@@ -1,12 +1,9 @@
-import { Link } from "react-router-dom";
-import { HiHome } from "@react-icons/all-files/hi/HiHome";
 import { useState } from "react";
+import { useEffect } from "react";
 import Cookies from 'js-cookie';
 import './login.css'
 
 function Login() {
-  //initialize cookies
-
 
 
   // initialize username and password
@@ -43,10 +40,9 @@ function Login() {
       }
 
 
-
       const { token } = await response.json();
       //Set Timing For The Cookie
-      const time = new Date(new Date().getTime() + 15 * 60 * 10)
+      const time = new Date(new Date().getTime() + 15 * 60 * 1000)
 
       //set cookie
       Cookies.set('jwt_auth', token, {
@@ -65,6 +61,38 @@ function Login() {
 
     }
   }
+  function updateLabel(input) {
+    const label = input.nextElementSibling;
+    if (input.value.length > 0) {
+      input.classList.add("has-value");
+      label.classList.add("has-value");
+    } else {
+      input.classList.remove("has-value");
+      label.classList.remove("has-value");
+    }
+  }
+
+  const inputs = document.querySelectorAll(".input-group input");
+  inputs.forEach(input => {
+    updateLabel(input);
+    input.addEventListener("input", () => updateLabel(input));
+  });
+
+
+
+  useEffect(() => {
+    if (!errorMessage) {
+      return;
+    }
+
+    const timeoutId = setTimeout(() => {
+      setErrorMessage("");
+    }, 2000);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [errorMessage]);
 
   /*console.log(token)
   localStorage.setItem('token', token);
@@ -77,27 +105,26 @@ function Login() {
   return (
     <>
       <div className="login-body">
-        <section className="login-card">
+        <div className="wrapper">
+          <div className="form-wrapper">
+            <form action="" onSubmit={handleSubmit} >
+              <div className="input-group">
+                <input type='text' onChange={(e) => setUsername(e.target.value)} value={username} />
+                <label htmlFor="username"> Username</label>
+              </div>
+              <div className="input-group" >
+                <input type='password' value={password}
+                  onChange={(e) => setPassword(e.target.value)} />
+                <label htmlFor="password"> Password</label>
+              </div>
+              {errorMessage && <p className="login-error">{errorMessage}</p>}
+              <button className="login-button" type="submit">Login</button>
+              <div className="login-back">
+                <p>Back To  The <a href="/">Main</a> Page</p>
+              </div>
+            </form>
 
-          <div className="login-header">
-            <Link to={'/'} className='Home-button '>
-              <HiHome />
-            </Link>
-            <h1>Log In</h1>
           </div>
-          <form onSubmit={handleSubmit} className='login-form'>
-            <label htmlFor="username">Username</label>
-            <input type="text"
-              onChange={(e) => setUsername(e.target.value)} value={username} />
-
-            <label htmlFor="password">Password</label>
-            <input type="password" value={password}
-              onChange={(e) => setPassword(e.target.value)} />
-            <button className="login-button button" type="submit">Log In</button>
-          </form>
-        </section>
-        <div className="login-error ">
-          {errorMessage && <p> {errorMessage}</p>}
         </div>
       </div>
     </>

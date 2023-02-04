@@ -69,6 +69,7 @@ color: rgba(255, 255, 255, 0.229);
  }
 
   .adduser-form input:focus{
+    text-align: center;
     outline-width: 0;
     color: rgba(255, 255, 255, 0.932);
     background-color:#a9a0b196; ;
@@ -77,7 +78,6 @@ color: rgba(255, 255, 255, 0.229);
   .error-dash{
     display: flex;
     font-size: 18px;
-
     background-color: rgba(61, 55, 55, 0.703);
     width: 250px;
 justify-content: center;

@@ -4,6 +4,9 @@ import Main from './pages/main/Main'
 import Login from './pages/Login/Login'
 import Privetrout from './pages/Login/Privetrout';
 import Dashboard from './pages/dashboard/Dashboard'
+
+
+
 function App() {
   return (
     <BrowserRouter>

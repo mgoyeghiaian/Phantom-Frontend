@@ -10,7 +10,7 @@ function Footer() {
     <div className='footer'>
       <div className='footer-logo'>
         <div>
-          <img src={Logo} />
+          <img alt='Phantom' src={Logo} />
         </div>
         <p>
           The best NFT marketplace website in the world and feel your experience in selling or buy our work
@@ -36,9 +36,9 @@ function Footer() {
         <p>adorableprogrammer@gmail.com</p>
       </div>
       <div className='icons'>
-        <img src={Youtube} />
-        <img src={Discord} />
-        <img src={Instagram} />
+        <img alt='Youtube' src={Youtube} />
+        <img alt='Discord' src={Discord} />
+        <img alt='Instagram' src={Instagram} />
       </div>
       <div className='footer-copy'>
         <p>Created by TEAM 3 ||  Right Reserved! </p>
