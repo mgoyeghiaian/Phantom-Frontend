@@ -1,7 +1,8 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./Faq.css";
 import faquestions from "./faq";
-function Faq() {const [showmore, Setshow] = useState();
+function Faq() {
+  const [openAnswerIndex, setOpenAnswerIndex] = useState(-1);
   return (
     <div className="faq-container">
       <div className="faq-title">
@@ -14,19 +15,23 @@ function Faq() {const [showmore, Setshow] = useState();
         {faquestions.map((item, index) => {
           return (
             <div className="faq-item" key={index}>
-              <p>{item.question}</p>
-              <div className="faq-answer">
+              <div className="faq-qb">
+                <p className="faq-question">{item.question}</p>
                 <button
                   className="faq-button"
-                  value="+"
-                  onClick={() => Setshow(!showmore)}
+                  onClick={() =>
+                    setOpenAnswerIndex(openAnswerIndex === index ? -1 : index)
+                  }
                 >
-                  +
+                  {openAnswerIndex === index ? "-" : "+"}
                 </button>
               </div>
-              <div className={`hiddenContent ${showmore ? "show" : ""}`}>
-                {item.answer} <hr />
-              </div>
+              {openAnswerIndex === index && (
+                <div className="faq-answer">
+                  <p>{item.answer}</p>
+                </div>
+              )}
+              <hr />
             </div>
           );
         })}
@@ -36,9 +41,3 @@ function Faq() {const [showmore, Setshow] = useState();
 }
 
 export default Faq;
-//   <div className={`hiddenContent ${showmore ? 'show' : ''}`}> dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar</div></p>
-// </div>
-// <div className='about-button'>
-//   <button className='button ' value="Show More" onClick={() => Setshow(!showmore)}>
-//     Show More
-//   </button>
