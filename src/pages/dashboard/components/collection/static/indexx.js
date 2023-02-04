@@ -5,62 +5,62 @@ import Img3 from '../images/collection5.svg'
 import Img4 from '../images/Rectangle6.svg'
 const Data = [{
     id: 1,
-    imgSrc: Img1,
-    type: 'sport',
-    creator: 'Ahmad',
+    image: Img1,
+    category: 'sport',
+    designerName: 'Ahmad',
 
-    current: 0.05,
-    name: 'Yellow Painting'
+    currentBid: 0.05,
+    nftName: 'Yellow Painting'
 },
 {
     id: 2,
-    imgSrc: Img2,
-    type: 'art',
+    image: Img2,
+    category: 'art',
 
-    creator: 'Rasha',
+    designerName: 'Rasha',
 
-    current: 0.05,
-    name: 'Yellow Painting'
+    currentBid: 0.05,
+    nftName: 'Yellow Painting'
 },
 {
     id: 3,
-    imgSrc: Img3,
-    type: 'photography',
+    image: Img3,
+    category: 'photography',
 
-    creator: 'Rasha',
+    designerName: 'Rasha',
 
     current: 0.05,
-    name: 'Yellow Painting'
+    nftName: 'Yellow Painting'
 },
 {
     id: 4,
-    imgSrc: Img4,
-    type: 'pattern',
+    image: Img4,
+    category: 'pattern',
 
-    creator: 'Rasha',
+    designerName: 'Rasha',
 
-    current: 0.05,
-    name: 'Yellow Painting'
+    currentBid: 0.05,
+    nftName: 'Yellow Painting'
 },
 {
     id: 5,
-    imgSrc: Img1,
-    type: 'pattern',
+    image: Img1,
+    category: 'pattern',
 
-    creator: 'Rasha',
-    currentbid: "current Bid",
+    designerName: 'Rasha',
+    currentBid: "current Bid",
     current: 0.05,
-    name: 'Yellow Painting'
+    nftName: 'Yellow Painting'
 },
 {
     id: 6,
-    imgSrc: Img2,
-    type: 'pattern',
+    image: Img2,
+    category: 'pattern',
     creatorimg: Img1,
-    creator: 'Rasha',
+    designerName: 'Rasha',
 
-    current: 0.05,
-    name: 'Yellow Painting'
+    currentBid: 0.05,
+    nftName: 'Yellow Painting'
 }
 
 ]
