@@ -2,6 +2,7 @@
   background: rgba(0, 0, 0, 0.632);
   color: #fff;
   border-radius: 15px;
+  box-shadow: 0 0 10px #6f5171 ;
   height: 120px;
 width: 100%;
 display: flex;
@@ -56,6 +57,7 @@ margin: 1px;
   color: rgba(232, 224, 224, 0.637);
   background-color: #a9a0b159;
   border-radius: 15px;
+  box-shadow: 0 0 10px #b69db8 ;
   height: 24px;
   width: auto;
   }
@@ -79,17 +81,19 @@ color: rgba(255, 255, 255, 0.229);
     display: flex;
     font-size: 18px;
     background-color: rgba(61, 55, 55, 0.703);
-    width: 250px;
+    width: 200px;
 justify-content: center;
     color: red;
     border-radius: 15px;
+    text-align: center;
   }
 
   .sucsess-dash{
     display: flex;
     font-size: 18px;
     background-color: rgba(61, 55, 55, 0.703);
-    width: 250px;
+    width: 200px;
+    text-align: center;
 justify-content: center;
     color: rgb(23, 223, 16);
     border-radius: 15px;
