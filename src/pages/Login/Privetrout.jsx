@@ -1,18 +1,13 @@
-import React from "react"
-import { Route, Navigate } from "react-router-dom"
+/*import React from "react"
+import { Navigate } from "react-router-dom"
 
-function Privetrout({ isAuth, component: Component, ...rest }) {
-  return (
-    <Route
-      {...rest}
-      render={(props) => {
-        if (isAuth) {
-          return <Component />;
-        } else {
-          return (<Navigate to={{ pathname: '/login', state: { from: props.location } }} />
-          );
-        }
-      }}
-    />)
+function Privetrout({ children }) {
+  const token = localStorage.getItem('token');
+  if (token) {
+    return children;
+
+  }
+  return <Navigate to="/" />
+
 }
-export default Privetrout
+export default Privetrout*/

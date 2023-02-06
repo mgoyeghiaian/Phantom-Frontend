@@ -11,42 +11,37 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 35px;
-  padding: 5px 5px 75px 5px ;
-  height: 200px;
-  width: 300px;
+  height: 450px;
+  width: 30%;
   border-radius: 15px;
 }
 
 .login-header{
   display: flex;
 align-items: center;
-margin-top: 15%;
-justify-content: center;
-align-self:flex-start;
-}
+flex-wrap: wrap;}
 
 .login-header h1{
   background: linear-gradient(214.02deg, #B75CFF 6.04%, #671AE4 92.95%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-size: 40px;
   }
 
 .login-form{
+  align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 3px;
-  width: 95%;
+  gap: 4px;
+  width: 70%;
 }
 
 .login-button{
-  background: -webkit-linear-gradient(-15deg, #B75CFF , #671AE4 );
-  border-radius: 10px;
-  border-color: transparent;
   color: #fff;
   font-size: 20px;
   cursor: pointer;
+  width: 50%;
 }
 
 .login-form input{
@@ -69,7 +64,7 @@ margin-bottom: 4%;
 }
 
 .login-button:active{
-  width : 270px;
+  width: 50%;
   height: 35px;
 }
 
@@ -77,22 +72,23 @@ margin-bottom: 4%;
 
 .Home-button{
   background-color: transparent;
-  border: none;
-  color: #671AE4;
-  font-size: 30px;
-  cursor:pointer;
-  margin-right: 90px;
-}
+  color: #9b78e1;
+  cursor:pointer; 
+   font-size: 40px;
+font-weight: bold;
+  }
 
 .Home-button:hover{
-  color: #6200ffb3;
-  font-size: 29.5px;
+  color: #7337d4b3;
+  font-size: 39px;
 }
 
 
 
 .Home-button:active{
-  font-size: 27px;
+  font-size: 37px;
+  color: red;
+  border: 1px solid red;
 }
 
 .login-error p{
@@ -104,3 +100,11 @@ margin-bottom: 4%;
   margin: top 15px;
   }
 
+  @media screen and (max-width : 768px) {
+    .login-card{
+    
+    width: 80%;
+    }
+  
+  
+  }

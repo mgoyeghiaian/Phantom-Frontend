@@ -23,6 +23,7 @@ function Login() {
       }
 
       const { token } = await response.json();
+      console.log(token)
 
       localStorage.setItem('token', token);
       window.location.href = '/dashboard';
@@ -43,11 +44,11 @@ function Login() {
             <h1>Log In</h1>
           </div>
           <form onSubmit={handleSubmit} className='login-form'>
-            <label htmlFor="username">Username:</label>
+            <label htmlFor="username">Username</label>
             <input type="text"
               onChange={(e) => setUsername(e.target.value)} value={username} />
 
-            <label htmlFor="password">Password:</label>
+            <label htmlFor="password">Password</label>
             <input type="password" value={password}
               onChange={(e) => setPassword(e.target.value)} />
             <button className="login-button button" type="submit">Log In</button>
