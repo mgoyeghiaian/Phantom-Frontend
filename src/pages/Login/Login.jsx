@@ -1,13 +1,17 @@
-import { Link } from "react-router-dom";
-import { HiHome } from "@react-icons/all-files/hi/HiHome";
 import { useState } from "react";
-
+import { useEffect } from "react";
+import Cookies from 'js-cookie';
 import './login.css'
 
 function Login() {
+
+
+  // initialize username and password
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  // initialize error message
   const [errorMessage, setErrorMessage] = useState('');
+
 
 
   const handleSubmit = async (event) => {
@@ -15,47 +19,104 @@ function Login() {
     try {
       const response = await fetch("http://localhost:3030/login", {
         method: 'POST',
-        headers:( { 'Content-Type': 'application/json' }),
+        headers: ({ 'Content-Type': 'application/json' }),
         body: JSON.stringify({ username, password }),
       });
-      if (!response.ok) {
-        throw new Error(response.statusText);
+
+      if (!username) {
+        setErrorMessage('Please enter a username');
+
+        return;
       }
 
-      const { token } = await response.json();
-      console.log(token)
+      if (!password) {
+        setErrorMessage('Please enter a password');
+        return;
+      }
 
-      localStorage.setItem('token', token);
-      window.location.href = '/dashboard';
+      if (!response) {
+        setErrorMessage('wrong username or password');
+        return;
+      }
+
+
+      const { token } = await response.json();
+      //Set Timing For The Cookie
+      const time = new Date(new Date().getTime() + 15 * 60 * 500)
+
+      //set cookie
+      Cookies.set('jwt_auth', token, {
+        expires: time,
+        secure: true,
+        sameSite: "Strict",
+        path: '/dashboard'
+
+      }
+      );
+      //redirect to dashboard page
+      window.location.href = "/dashboard";
+
     } catch (error) {
-      setErrorMessage(error.message || error);
+      setErrorMessage('Bad request', error);
+
+    }
+  }
+  function updateLabel(input) {
+    const label = input.nextElementSibling;
+    if (input.value.length > 0) {
+      input.classList.add("has-value");
+      label.classList.add("has-value");
+    } else {
+      input.classList.remove("has-value");
+      label.classList.remove("has-value");
+    }
+  }
+
+  const inputs = document.querySelectorAll(".input-group input");
+  inputs.forEach(input => {
+    updateLabel(input);
+    input.addEventListener("input", () => updateLabel(input));
+  });
+
+
+
+  useEffect(() => {
+    if (!errorMessage) {
+      return;
     }
 
-  };
+    const timeoutId = setTimeout(() => {
+      setErrorMessage("");
+    }, 2000);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [errorMessage]);
+  
   return (
     <>
       <div className="login-body">
-        <section className="login-card">
+        <div className="wrapper">
+          <div className="form-wrapper">
+            <form action="" onSubmit={handleSubmit} >
+              <div className="input-group">
+                <input type='text' onChange={(e) => setUsername(e.target.value)} value={username} />
+                <label htmlFor="username"> Username</label>
+              </div>
+              <div className="input-group" >
+                <input type='password' value={password}
+                  onChange={(e) => setPassword(e.target.value)} />
+                <label htmlFor="password"> Password</label>
+              </div>
+              {errorMessage && <p className="login-error">{errorMessage}</p>}
+              <button className="login-button" type="submit">Login</button>
+              <div className="login-back">
+                <p>Back To  The <a href="/">Main</a> Page</p>
+              </div>
+            </form>
 
-          <div className="login-header">
-            <Link to={'/'} className='Home-button '>
-              <HiHome />
-            </Link>
-            <h1>Log In</h1>
           </div>
-          <form onSubmit={handleSubmit} className='login-form'>
-            <label htmlFor="username">Username</label>
-            <input type="text"
-              onChange={(e) => setUsername(e.target.value)} value={username} />
-
-            <label htmlFor="password">Password</label>
-            <input type="password" value={password}
-              onChange={(e) => setPassword(e.target.value)} />
-            <button className="login-button button" type="submit">Log In</button>
-          </form>
-        </section>
-        <div className="login-error ">
-          {errorMessage && <p> {errorMessage}</p>}
         </div>
       </div>
     </>

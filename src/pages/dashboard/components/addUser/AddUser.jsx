@@ -2,7 +2,7 @@ import React from 'react'
 import './AddUser.css'
 import { Link } from 'react-router-dom'
 import { HiHome } from "@react-icons/all-files/hi/HiHome";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 function AddUser() {
@@ -41,7 +41,22 @@ function AddUser() {
 
     }
 
+
   }
+  useEffect(() => {
+    if (!errorMessage && !message) {
+      return;
+    }
+
+    const timeoutId = setTimeout(() => {
+      setErrorMessage("");
+      setMessage('');
+    }, 2000);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [errorMessage, message]);
   return (
     <>
       <div className='adduser'>

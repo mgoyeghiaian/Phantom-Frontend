@@ -8,6 +8,8 @@
 section{
   margin-top: 9%;
 }
+html{scroll-behavior:smooth}
+
 .button{
   background: -webkit-linear-gradient(-15deg, #B75CFF , #671AE4 );
   border-radius: 12px;
