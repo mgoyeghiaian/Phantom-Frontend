@@ -36,15 +36,15 @@ function Footer() {
         <p>adorableprogrammer@gmail.com</p>
       </div>
       <div className='icons'>
-        <img alt='Youtube' src={Youtube} />
-        <img alt='Discord' src={Discord} />
-        <img alt='Instagram' src={Instagram} />
+        <a href='https://youtube.com' target='_blank' rel="noreferrer"> <img alt='Youtube' src={Youtube} /></a>
+        <a href='https://Discord.com' target='_blank' rel="noreferrer">    <img alt='Discord' src={Discord} /></a>
+        <a href='https://Instagram.com' target='_blank0' rel="noreferrer"> <img alt='Instagram' src={Instagram} /></a>
       </div>
       <div className='footer-copy'>
         <p>Created by TEAM 3 ||  Right Reserved! </p>
       </div>
 
-    </div >
+    </div>
   )
 }
 export default Footer

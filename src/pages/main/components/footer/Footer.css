@@ -33,12 +33,16 @@ margin-bottom: 20%;
 gap: 60%;
 }
 
+
 .footer h1{
   color : #ffffff;
 }
 
 .footer p{
   color : #ffffff9a;
+}
+.icons a:hover img {
+  filter: brightness(80%);
 }
 
 @media screen and (max-width : 768px) {
