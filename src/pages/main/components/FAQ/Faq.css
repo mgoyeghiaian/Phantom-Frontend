@@ -2,11 +2,22 @@
 @media all and (min-width:768px) {
 .faq-container {
   margin-top: 80px;
+  display: grid;
+    margin-top: 80px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 300px 400px;
+    position: relative;
 }
+
 .faq-title {
   text-align: center;
   font-size: 30px;
   color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -25vh;
 }
 .faq-title h1 {
   font-size: 40px;
@@ -20,10 +31,11 @@
 .faq-qa {
   color: white;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 50%;
   grid-template-rows: 1fr 1fr 1fr;
   justify-items: center;
   justify-content: center;
+  grid-row-start: 2;
 }
 .faq-question{
   color: white;
