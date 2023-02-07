@@ -14,9 +14,12 @@ const SECTIONS = [
 ];
 
 const Searchbar = () => {
+
   const [searchResults, setSearchResults] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
+
+  /** To Clear The Output when i clear the text in search form */
   const handleSearchInput = (event) => {
     const searchTerm = event.target.value.toLowerCase();
     setSearchTerm(searchTerm);
@@ -27,7 +30,7 @@ const Searchbar = () => {
     }
   };
 
-
+  /** Read The Inpouts and and convert it to lower case and give the RESAULT */
   const handleSectionClick = (event) => {
     event.preventDefault();
     const matchingSection = SECTIONS.find(section => section.name.toLowerCase().startsWith(searchTerm));
@@ -60,11 +63,11 @@ const Searchbar = () => {
           <ul>
             {searchResults.map(section => (
               <li key={section.id}>
-                <a
+                <h4
                   href="#"
                   onClick={event => handleSectionClick(event)}>
                   {section.name}
-                </a>
+                </h4>
               </li>
             ))}
           </ul>

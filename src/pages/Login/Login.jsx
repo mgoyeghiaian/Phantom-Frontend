@@ -6,14 +6,14 @@ import './login.css'
 function Login() {
 
 
-  // initialize username and password
+  /**  initialize username and password */
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  // initialize error message
+  /**  initialize error message */
   const [errorMessage, setErrorMessage] = useState('');
 
 
-
+  /** Posting username and password and getting the token from the backend */
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -39,12 +39,14 @@ function Login() {
         return;
       }
 
-
+      /**
+       * Getting token 
+       */
       const { token } = await response.json();
       //Set Timing For The Cookie
       const time = new Date(new Date().getTime() + 15 * 60 * 500)
 
-      //set cookie
+      /** set cookie */
       Cookies.set('jwt_auth', token, {
         expires: time,
         secure: true,
@@ -53,7 +55,7 @@ function Login() {
 
       }
       );
-      //redirect to dashboard page
+      /** redirect to dashboard page */
       window.location.href = "/dashboard";
 
     } catch (error) {
@@ -61,6 +63,7 @@ function Login() {
 
     }
   }
+
   function updateLabel(input) {
     const label = input.nextElementSibling;
     if (input.value.length > 0) {
@@ -79,6 +82,7 @@ function Login() {
   });
 
 
+  /** Remove the error Message after 2 Sec */
 
   useEffect(() => {
     if (!errorMessage) {
@@ -93,7 +97,7 @@ function Login() {
       clearTimeout(timeoutId);
     };
   }, [errorMessage]);
-  
+
   return (
     <>
       <div className="login-body">
