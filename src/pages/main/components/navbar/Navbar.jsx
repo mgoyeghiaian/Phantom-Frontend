@@ -6,6 +6,9 @@ import './Navbar.css'
 import { useState } from 'react';
 import Searchbar from './Searchbar';
 const Navbar = () => {
+
+  /**  To open And Close the menu in the mobile vergion  */
+
   const [isOpen, setIsOpen] = useState(false);
   return (
     <nav className='navbar'>
@@ -15,7 +18,7 @@ const Navbar = () => {
         </a>
       </div>
       <div className={`nav-right ${isOpen ? 'open' : ''}`}>
-<Searchbar />
+        <Searchbar />
         <a href="#collection">Collections</a>
         <a href="#featuredartworks">Feature</a>
         <a href="#faq">FAQ</a>

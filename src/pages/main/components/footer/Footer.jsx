@@ -18,22 +18,22 @@ function Footer() {
       </div>
       <div className='footer-about'>
         <h1> About</h1>
-        <p>Product</p>
-        <p>Resource</p>
-        <p>Term & Condition</p>
-        <p>FAQ</p>
+        <a href='#collection'>Product</a>
+        <a href='#Res'>Resource</a>
+        <a href='#Term'>Term & Condition</a>
+        <a href='#faq'>FAQ</a>
       </div>
       <div className='footer-company'>
         <h1>Company</h1>
-        <p>Our Team</p>
-        <p>Partner With Us</p>
-        <p>Privacy & Policy</p>
-        <p>Fratures</p>
+        <a href='#OurTeam'>Our Team</a>
+        <a href='#Partner'>Partner With Us</a>
+        <a href='#Privacy'>Privacy & Policy</a>
+        <a href='#featuredartworks'>Fratures</a>
       </div>
       <div className='footer-contact' >
         <h1>Contact</h1>
-        <p>+012 3456789</p>
-        <p>adorableprogrammer@gmail.com</p>
+        <a href='tel:+0123456789'>+012 3456789</a>
+        <a href="mailto:adorableprogrammer@gmail.com">adorableprogrammer@gmail.com</a>
       </div>
       <div className='icons'>
         <a href='https://youtube.com' target='_blank' rel="noreferrer"> <img alt='Youtube' src={Youtube} /></a>

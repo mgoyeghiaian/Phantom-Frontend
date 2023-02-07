@@ -110,13 +110,14 @@ background-color: rgba(128, 128, 128, 0.418);
   border-bottom: 1px solid rgb(0, 0, 0);
 }
 
-.search-results a{
+.search-results h4{
   color: rgba(255, 253, 253, 0.807);
   text-decoration: none;
   display: block;
+  margin: 10px 0  10px 5px;
 }
 
-.search-results a:hover {
+.search-results h4:hover {
   filter: brightness(80%);
   background-color: rgba(63, 49, 90, 0.228);
   cursor: pointer;
@@ -138,7 +139,7 @@ width: 89%;
 
   .search-form{
     display: flex;
-    align-items: center;
+    margin-right: 15px;
     background-color: rgba(140, 135, 135, 0.228);
     border-radius: 10px;
   }
@@ -147,8 +148,7 @@ width: 89%;
     font-size: 16px;
   }
 
-
-
+/** Hamburger Lines Size*/
   .line {
     width: 30px;
     height: 3px;
@@ -169,6 +169,7 @@ width: 89%;
       z-index: 2;
   }
 
+  
 .nav-right{
 position:absolute;
 top: 15px;
@@ -208,9 +209,5 @@ display: none;
   width:80%;
 
 }
-
-
-
-
 }
 

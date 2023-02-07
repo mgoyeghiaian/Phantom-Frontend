@@ -38,8 +38,17 @@ gap: 60%;
   color : #ffffff;
 }
 
-.footer p{
+.footer a{
   color : #ffffff9a;
+  display: block;
+  text-decoration: none;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.footer a:hover{
+  filter: brightness(80%);
+
 }
 .icons a:hover img {
   filter: brightness(80%);

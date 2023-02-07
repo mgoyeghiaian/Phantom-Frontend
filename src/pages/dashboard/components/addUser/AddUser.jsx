@@ -8,11 +8,13 @@ import { useState, useEffect } from "react";
 function AddUser() {
 
 
-
+  /**  initialize username , password , Error Message And added successfully Message */
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [message, setMessage] = useState('');
+
+  /** Posting The New Username and password To the database  */
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -41,7 +43,7 @@ function AddUser() {
 
     }
 
-
+    /** to make the error message & the message dispeare after 2 sec */
   }
   useEffect(() => {
     if (!errorMessage && !message) {

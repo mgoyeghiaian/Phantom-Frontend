@@ -1,17 +1,23 @@
+
+/** ScrollBar Size.... */
 ::-webkit-scrollbar{
   width: 10px;
   height: 10px;
 }
 
-
+/** Changing ScrollBar Tracker Color And Size */
 ::-webkit-scrollbar-track{
   border-radius: 5px;
   background: #7356a655;
   margin-block: 0.1em;
 }
- ::-webkit-scrollbar-thumb{
+
+  /** Changing ScrollBar Thumb Color And Size */
+
+  ::-webkit-scrollbar-thumb{
   border-radius: 5px;
-  background: linear-gradient(90deg, rgba(177,156,156,1) 8%, rgba(168,128,150,1) 17%, rgba(80,10,59,1) 41%, rgb(77, 5, 54) 59%);  border: 1px solid rgba(88, 78, 78, 0.859);
+  background: linear-gradient(90deg,#160e1d , #4751be); 
+   border: 1px solid rgba(90, 78, 78, 0.582);
  }
  
 body {
