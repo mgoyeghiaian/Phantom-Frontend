@@ -1,7 +1,11 @@
 /*Top Creators Section For The Main page  Styleing*/
-.creator {
-  background-color: red;
-  width: 25%;
+.nfts {
+  /* background-color: red; */
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 10%;
+  padding: 0.5rem;
 }
 
 .nft-img {
@@ -11,9 +15,36 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-
-  background-color: blue;
+  align-items: center;
+  /* background-color: blue; */
 }
-.centerp {
-  text-align: center;
+
+.image-creator img {
+  width: 30%;
+  margin-top: -60px;
+  border-radius: 20rem;
+  border: 0.5px white solid;
+  box-shadow: 5px;
+}
+
+.creator-button {
+  padding: 0.5rem 4rem;
+}
+
+.Description-creator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  color: white;
+}
+
+.Description-creator div {
+  padding: 0.4rem;
+}
+
+.card-container-creator {
+  padding: 0.6rem;
+  border: 1px solid green;
 }
