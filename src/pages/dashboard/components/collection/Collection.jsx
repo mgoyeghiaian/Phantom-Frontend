@@ -1,27 +1,43 @@
 import React from 'react'
 import './Collection.css'
 import Data from './static/indexx'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import axios from 'axios'
-import { useEffect } from 'react'
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams,useHistory } from "react-router-dom";
 
-function Collection() {
+
+function Collection({match}) {
 
   const { id } = useParams();
 
   const [collection, setCollection] = useState('art');
   const[nftCollection,postNft]=useState("")
   const[data,setNft]=useState([])
-
+  const[nftName,setNftNamee]=useState("")
+  const[designerName,setNftdesigner]=useState("")
+  const[currentBid,setNftcurrentBid]=useState("")
+  const[category,setNftcategory]=useState("")
+  const[idd,setidd]=useState("")
+  
   useEffect(() => {
     loadNft()
     },[]);
+
+    useEffect(() => {
+      loadNftbyId()
+      },[]);
+
+  
+
   
   const selectedCollection = (e) => {
     console.log(e.target.name);
     e.preventDefault();
     setCollection(e.target.name)
+        
+          
+            
+        
   }
 
   const addNFT = (e) => {
@@ -34,10 +50,25 @@ function Collection() {
     
   };
 
+
+
   const loadNft=async()=>{
     const res= await axios.get("http://localhost:3030/nft/nfts/")
     setNft(res.data);
-      
+  
+    
+  };
+
+  const loadNftbyId=async(id)=>{
+    const res= await axios.get(`http://localhost:3030/nft/nftss/${id}`)
+    console.log(res);
+    setNftNamee(res.data.nftName);
+    setNftdesigner(res.data.designerName)
+    setNftcurrentBid(res.data.currentBid)
+    setNftcategory(res.data.category)
+    setidd(res.data._id)
+    
+    
   };
 
   const deleteNft=async (id) => {
@@ -65,29 +96,20 @@ function Collection() {
       console.log("error", err);
     }
   };
-   
 
-
-  return (
-    <>
-    <div className='collection'>
-      Collection Dashboard<br/>
-      <p className='desc'>Lorem ipsum dolor sit amet, consectetur <br/>adipiscing elit.</p>
-      <a href='#form'>
-        <button className=' button coll-btn' >Add</button>
-      </a>
-      <div className='navbar-nfts'>
-        <button name='art' className='btn1' onClick={selectedCollection} >Art</button>
-        <button name='sport' className='btn2' onClick={selectedCollection}>Sport</button>
-        <button name='photography' className='btn3' onClick={selectedCollection}>Photography</button>
-        <button name='pattern' className='btn4' onClick={selectedCollection}>Pattern</button>
-      </div>
-      {
-     
-      <div className='nfts'>
-        {data.map((item,index)=>{
+  function hello(){
+    
+    console.log("coll",collection)
+    
+    
+      {data.map((item,index)=>{
+      
+        
         return(
+          
           <div className='pics'key={index}>
+            
+           {console.log(selectedCollection===collection)}
             <img className ="nft-img" src={`http://localhost:3030/nft/nfts/${item.image}`} alt="img" />  
             <br/>
             <div className='creator'>
@@ -100,7 +122,83 @@ function Collection() {
               {item.nftName}
               </div>
               <a href='#form'>
-              <button className=' button collection-button'  >Update</button>
+              <button className=' button collection-button' onClick={() =>loadNftbyId(item._id)  } >Update</button>
+              </a>
+              <button className=' button collection-button' onClick={() =>deleteNft(item._id) } >Delete</button>
+           
+          
+              </div>
+      
+        )
+        
+        })}
+    
+  }
+
+
+
+  const UpdateNFTAxios = async (e) => {
+    e.preventDefault();
+    let postupdate={nftName,designerName,currentBid,category}
+    console.log("nftcollection ",nftName,designerName,currentBid,category)
+   
+      
+
+      try {
+        console.log("id"+idd)
+        const response = await axios.put(`http://localhost:3030/nft/nfts/${idd}`,{
+         nftName,
+         designerName,
+          currentBid,
+          category
+      });
+      console.log("updatedddd",response)
+        
+
+      }
+      catch(err){
+        console.log("error"+err)
+      }
+    }
+  // const form = useRef();
+
+  return (
+    <>
+    <div className='collection'>
+      Collection Dashboard<br/>
+      <p className='desc'>Lorem ipsum dolor sit amet, consectetur <br/>adipiscing elit.</p>
+      <a href='#form'>
+        <button className=' button coll-btn' >Add</button>
+      </a>
+      <div className='navbar-nfts'>
+        
+        <button name='art' className='btn1' onClick={selectedCollection} >Art</button>
+        <button name='sport' className='btn2' onClick={selectedCollection}>Sport</button>
+        <button name='photography' className='btn3' onClick={selectedCollection}>Photography</button>
+        <button name='pattern' className='btn4' onClick={selectedCollection}>Pattern</button>
+      </div>
+      {
+     
+      <div className='nfts'>
+        {data.map((item,index)=>{
+          
+        return(
+         
+          <div className='pics'key={index}>
+            <img className ="nft-img" src={`http://localhost:3030/nft/nfts/${item.image}`} alt="img" />  
+            <br/>
+            
+            <div className='creator'>
+            <p className='firstpart-creator' > @{item.designerName}</p>
+              <p className='secondpart-creator'>Current Bid</p>
+              </div>
+              
+              <div className='bid'>{item.currentBid} eth</div>
+              <div className='names' >
+              {item.nftName}
+              </div>
+              <a href='#form'>
+              <button className=' button collection-button' onClick={() =>loadNftbyId(item._id)  } >Update</button>
               </a>
               <button className=' button collection-button' onClick={() =>deleteNft(item._id) } >Delete</button>
           </div>
@@ -119,7 +217,7 @@ function Collection() {
     <legend className='legendd'>Add NFTS</legend>
     <br/>
    
-    <label >Enter an NFT name: <br/><input type='text' name="nftName"  value={nftCollection.nftName} onChange={addNFT}></input></label>
+    <label >Enter an NFT name: <br/><input type='text' name="nftName" value={nftCollection.nftName} onChange={addNFT} ></input></label>
     <br/>
     <label >Designer name: <br/><input type='text' name="designerName" value={nftCollection.designerName} onChange={addNFT}></input></label>
     <br/>
@@ -140,32 +238,38 @@ function Collection() {
   <input type="submit" value="Submit" id="submit" className='button'></input>
   <br/>
   </form>
-  
-  <form className='second-form'>
+
+
+
+  <form className='second-form' onSubmit={UpdateNFTAxios}>
     <br/>
-  <legend className='legendd'>Update NFTS</legend>
+    <legend className='legendd'>Update NFTS</legend>
+    <br/>
+   
+    <label >Enter an NFT name: <br/><input type='text' name="nftName" value={nftName} onChange={(e) => setNftNamee(e.target.value)} ></input></label>
+    <br/>
+    <label >Designer name: <br/><input type='text' name="designerName" value={designerName} onChange={(e) => setNftdesigner(e.target.value)} ></input></label>
+    <br/>
+    <label>Current Bid: <br/><input type='text' name="currentBid" value={currentBid} onChange={(e) => setNftcurrentBid(e.target.value)} ></input></label>
+    <br/>
+     {/* <label id="nft-img" >NFT Image: <br/><input type='file' id="imgg" name="nftImage" onChange={updateNFT} ></input></label>
+    <br/>  */}
+    <label for="type">Choose a type for the NFT:</label>
+    <br/>
+  <select id="typeee" name="category" value={category} onChange={(e) => setNftcategory(e.target.value)}>
+    <option value="art">art</option>
+    <option value="sport">sport</option>
+    <option value="photography">photography</option>
+    <option value="pattern">pattern</option>
+  </select>
   <br/>
-  <label>Enter an NFT name: <br/><input type='text'></input></label>
   <br/>
-  <label>Designer name: <br/><input type='text'></input></label>
+  <input type="submit" value="Submit" id="submit" className='button'></input>
   <br/>
-  <label>Current Bid: <br/><input type='text'></input></label>
-  <br/>
-  <label id="nft-imgg">NFT Image: <br/><input type='file' id="imgg"></input></label>
-  <br/>
-  <label for="type">Choose a type for the NFT:</label>
-  <br/>
-<select id="typeee" name="category">
-  <option value="art">art</option>
-  <option value="sport">sport</option>
-  <option value="photography">photography</option>
-  <option value="pattern">pattern</option>
-</select>
-<br/>
-<br/>
-<input type="submit" value="Update" id="submitt" className='button'></input>
-<br/>
   </form>
+
+  
+ 
   </div>
    </>
   )
