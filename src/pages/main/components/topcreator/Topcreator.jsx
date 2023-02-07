@@ -18,6 +18,44 @@ function TopCreator() {
   //   console.log("Hello");
   // };
 
+  const [creator, setCreator] = useState([]);
+
+  useEffect(() => {
+    setIsLoading(true);
+    fetchCreators();
+  }, [fetchChecker]); 
+
+  const fetchCreators = async () => {
+    try {
+      const res = await fetch(
+        ('http://localhost:8000/creator')
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      const resJson = await res.json();
+      setCreators(resJson.data);
+      setIsLoading(false);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     <>
       <div className="Main-creator">
