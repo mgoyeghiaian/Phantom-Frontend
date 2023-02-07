@@ -74,6 +74,8 @@ function Collection({match}) {
   const deleteNft=async (id) => {
     await axios.delete(`http://localhost:3030/nft/nfts/${id}`)
     loadNft()
+    alert("You have update it!")
+    window.location.reload(true); 
   }
     
   const AddNFTAxios = async (e) => {
@@ -91,49 +93,15 @@ function Collection({match}) {
 
       try {
       const response = await axios.post("http://localhost:3030/nft/nfts/", formData, config);
+      alert("You have add an Nft it!")
+      window.location.reload(true); 
       console.log("response ",response)
     } catch (err) {
       console.log("error", err);
     }
   };
 
-  function hello(){
-    
-    console.log("coll",collection)
-    
-    
-      {data.map((item,index)=>{
-      
-        
-        return(
-          
-          <div className='pics'key={index}>
-            
-           {console.log(selectedCollection===collection)}
-            <img className ="nft-img" src={`http://localhost:3030/nft/nfts/${item.image}`} alt="img" />  
-            <br/>
-            <div className='creator'>
-            <p className='firstpart-creator' > @{item.designerName}</p>
-              <p className='secondpart-creator'>Current Bid</p>
-              </div>
-              
-              <div className='bid'>{item.currentBid} eth</div>
-              <div className='names' >
-              {item.nftName}
-              </div>
-              <a href='#form'>
-              <button className=' button collection-button' onClick={() =>loadNftbyId(item._id)  } >Update</button>
-              </a>
-              <button className=' button collection-button' onClick={() =>deleteNft(item._id) } >Delete</button>
-           
-          
-              </div>
-      
-        )
-        
-        })}
-    
-  }
+
 
 
 
@@ -152,6 +120,8 @@ function Collection({match}) {
           currentBid,
           category
       });
+      alert("You have update it!")
+      window.location.reload(true); 
       console.log("updatedddd",response)
         
 
@@ -180,7 +150,7 @@ function Collection({match}) {
       {
      
       <div className='nfts'>
-        {data.map((item,index)=>{
+        {data.filter(item=>item.category===collection).map((item,index)=>{
           
         return(
          
@@ -227,7 +197,7 @@ function Collection({match}) {
     <br/>
     <label for="type">Choose a type for the NFT:</label>
     <br/>
-  <select id="typee" name="category" value={nftCollection.category} >
+  <select id="typee" name="category" value={nftCollection.category} onChange={addNFT} >
     <option value="art">art</option>
     <option value="sport">sport</option>
     <option value="photography">photography</option>
@@ -257,10 +227,10 @@ function Collection({match}) {
     <label for="type">Choose a type for the NFT:</label>
     <br/>
   <select id="typeee" name="category" value={category} onChange={(e) => setNftcategory(e.target.value)}>
-    <option value="art">art</option>
-    <option value="sport">sport</option>
-    <option value="photography">photography</option>
-    <option value="pattern">pattern</option>
+    <option value="art" >art</option>
+    <option value="sport" >sport</option>
+    <option value="photography" >photography</option>
+    <option value="pattern" >pattern</option>
   </select>
   <br/>
   <br/>

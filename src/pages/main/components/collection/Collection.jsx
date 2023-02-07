@@ -57,20 +57,23 @@ function Collection() {
     {
      
       <div className='nfts'>
-    {data.map((item,index)=>{
-      return(
-        <div className='pics'key={index}>
-          <img className ="nft-img" src={`http://localhost:3030/nft/nfts/${item.image}`} /> 
-          <br/>
-          <div className='creator'>
-           <p className='firstpart-creator' > @{item.designerName}</p>
-            <p className='secondpart-creator'>Current Bid</p>
-            </div>
-            
-            <div className='bid'>{item.currentBid} eth</div>
-            <div className='names' >
-            {item.nftName}
-            </div>
+    {data.filter(item=>item.category===collection).map((item,index)=>{
+          
+          return(
+           
+            <div className='pics'key={index}>
+              <img className ="nft-img" src={`http://localhost:3030/nft/nfts/${item.image}`} alt="img" />  
+              <br/>
+              
+              <div className='creator'>
+              <p className='firstpart-creator' > @{item.designerName}</p>
+                <p className='secondpart-creator'>Current Bid</p>
+                </div>
+                
+                <div className='bid'>{item.currentBid} eth</div>
+                <div className='names' >
+                {item.nftName}
+                </div>
             <br/>
             <button className=' button collection-button' onClick={(e)=>showdeatils(item._id)} >Place a bid</button>
             
