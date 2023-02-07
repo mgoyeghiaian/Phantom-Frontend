@@ -44,7 +44,7 @@ function Login() {
        */
       const { token } = await response.json();
       //Set Timing For The Cookie
-      const time = new Date(new Date().getTime() + 15 * 60 * 500)
+      const time = new Date(new Date().getTime() + 30 * 60 * 1000)
 
       /** set cookie */
       Cookies.set('jwt_auth', token, {
@@ -59,7 +59,7 @@ function Login() {
       window.location.href = "/dashboard";
 
     } catch (error) {
-      setErrorMessage('Bad request', error);
+      setErrorMessage('wrong username or password', error);
 
     }
   }
