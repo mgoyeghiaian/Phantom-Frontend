@@ -25,7 +25,7 @@ function App() {
       {
         loading ?
           <div className='loader'>
-            <img src={Logo} />
+            <img src={Logo} alt='logo' />
             <RingLoader
               color="#9228d3"
               cssOverride={null}
