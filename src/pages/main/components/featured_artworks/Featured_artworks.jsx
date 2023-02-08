@@ -10,8 +10,9 @@ function Featured_artworks() {
   const showdeatils = (id) => {
     alert("You placed a bid")
   }
+
   useEffect(() => {
-    axios.get('http://localhost:3030/nft/nfts/')
+    axios.get('http://localhost:3030/nft/nfts')
       .then(response => setData(response.data))
   }, []);
 
@@ -34,18 +35,22 @@ function Featured_artworks() {
           {lastThree.map((item) => {
             return (
               <div className='pics' key={item}>
-                <img className="nft-img" alt="artwork" src={`http://localhost:3030/nft/nfts/${item.image}`} />
-                <br />
-                <div className='creator'>
-                  <p className='firstpart-creator' > @{item.designerName}</p>
-                  <p className='secondpart-creator'>Current Bid</p>
+                <div className='sizeofimage'>
+                  <img className="nft-img" alt="artwork" src={`http://localhost:3030/nft/nfts/${item.image}`} />
+                  <br />
                 </div>
-                <div className='bid'>{item.currentBid} eth</div>
-                <div className='names' >
-                  {item.nftName}
+                <div className='infopart'>
+                  <div className='creator'>
+                    <p className='firstpart-creator' > @{item.designerName}</p>
+                    <p className='secondpart-creator'>Current Bid</p>
+                  </div>
+                  <div className='bid'>{item.currentBid} eth</div>
+                  <div className='names' >
+                    {item.nftName}
+                  </div>
+                  <br />
+                  <button className=' button collection-button' onClick={(e) => showdeatils(item.id)} >Place a Bid</button>
                 </div>
-                <br />
-                <button className=' button collection-button' onClick={(e) => showdeatils(item.id)} >Place a Bid</button>
               </div>
             )
           })}
