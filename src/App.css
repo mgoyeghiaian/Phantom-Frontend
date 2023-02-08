@@ -35,3 +35,21 @@ html{scroll-behavior:smooth}
   line-height: 30px;
   cursor: pointer;
 }
+
+.loader{
+  display: flex;
+  position: absolute;
+  top: 50%;
+align-items: center; 
+justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.loader img{
+  position: absolute;
+  bottom: 110%;
+  margin-left: 10px;
+  height: fit-content;
+
+}
