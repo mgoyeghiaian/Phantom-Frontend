@@ -99,7 +99,7 @@ display: flex;
 .navbar-nfts{
     display: flex;
     flex-direction: row;
-    /* margin: auto auto auto auto; */
+    margin-left: 25px;
     
 }
 .btn1{

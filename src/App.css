@@ -1,17 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-*{
+/** Font Family For The Whole Website */
 
+*{
   font-family: 'Poppins', sans-serif;
 }
-.button{
-background: -webkit-linear-gradient(-15deg, #B75CFF , #671AE4 );
-border-radius: 10px;
-/* border-color: transparent; */
-color: #fff;
-font-size: 20px;
-line-height: 30px;
 
+/** Margin Top For All Seactions In The Main Page  */
+section{
+  margin-top: 9%;
+}
+
+/** To Make The Scrolling Smooth */
+html{scroll-behavior:smooth}
+
+
+/** The Whole Website Button Colors */
+.button{
   background: -webkit-linear-gradient(-15deg, #B75CFF , #671AE4 );
   border-radius: 12px;
   border-color: #B75CFF ;
@@ -19,6 +24,7 @@ line-height: 30px;
   font-size: 20px;
   line-height: 30px;
 }
+/** The Whole Website Button Colors On Hover */
 
 .button:hover{
   background: -webkit-linear-gradient(-15deg, #B75CFF , #671AE4 );
@@ -27,4 +33,23 @@ line-height: 30px;
   color: rgba(223, 210, 210, 0.904);
   font-size: 20px;
   line-height: 30px;
+  cursor: pointer;
+}
+
+.loader{
+  display: flex;
+  position: absolute;
+  top: 50%;
+align-items: center; 
+justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.loader img{
+  position: absolute;
+  bottom: 110%;
+  margin-left: 10px;
+  height: fit-content;
+
 }

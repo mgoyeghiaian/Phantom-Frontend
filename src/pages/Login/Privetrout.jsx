@@ -1,18 +1,22 @@
-import React from "react"
-import { Route, Navigate } from "react-router-dom"
+import { Navigate } from "react-router-dom"
+import Cookies from 'js-cookie';
+function Privetrout({ children }) {
 
-function Privetrout({ isAuth, component: Component, ...rest }) {
+  const token = Cookies.get('jwt_auth')
+  /** Checking If theres token to take to the child */
+  if (token) {
+    return children;
+
+  }
+
+  /** Checking If theres no token Give Alert And Navigate To Login */
+
   return (
-    <Route
-      {...rest}
-      render={(props) => {
-        if (isAuth) {
-          return <Component />;
-        } else {
-          return (<Navigate to={{ pathname: '/login', state: { from: props.location } }} />
-          );
-        }
-      }}
-    />)
+    alert('You are not allowed to access this part of the site.'), <Navigate to="/login" />
+
+
+
+
+  )
 }
 export default Privetrout
