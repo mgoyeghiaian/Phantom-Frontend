@@ -1,18 +1,18 @@
-const faquestions = [
+const faquestionsTwo = [
   {
-    id: 1,
+    id: 4,
     question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
     answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
-    id: 2,
+    id: 5,
     question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
     answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
-    id: 3,
+    id: 6,
     question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
     answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
 ];
-export default faquestions;
+export default faquestionsTwo;

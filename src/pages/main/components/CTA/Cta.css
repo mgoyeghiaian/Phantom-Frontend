@@ -2,7 +2,7 @@
 .cta-box {
   margin-top: 75px;
   display: block;
-  width: 100%;
+  width: 85%;
   height: 200px;
   background: -webkit-linear-gradient(-15deg, #b75cff, #671ae4);
   border: 1px solid #671ae4;
@@ -23,7 +23,13 @@
   cursor: pointer;
  
 }
-.cta-button:focus{
-    background: -webkit-linear-gradient(-15deg, #B75CFF , #671AE4 );
-    border: 1px solid   #671AE4 ;
+.cta-button:hover{
+     background: -webkit-linear-gradient(-15deg, #B75CFF , #671AE4 );
+  border-radius: 10px;
+  border-color: #050108eb ;
+  color: rgba(223, 210, 210, 0.904);
+  font-size: 20px;
+  line-height: 20px;
+    width: 120px;
+  cursor: pointer;
 }
