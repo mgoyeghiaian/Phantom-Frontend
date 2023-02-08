@@ -201,8 +201,8 @@ function Collection({ match }) {
           <label for="type">Choose a type for the NFT:</label>
           <br />
           <select id="typee" name="category" value={nftCollection.category} onChange={addNFT} >
-            <option></option>
-            <option value="art" selected>art</option>
+            <option selected></option>
+            <option value="art" >art</option>
             <option value="sport">sport</option>
             <option value="photography">photography</option>
             <option value="pattern">pattern</option>

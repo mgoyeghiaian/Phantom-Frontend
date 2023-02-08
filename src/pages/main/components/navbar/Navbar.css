@@ -139,7 +139,7 @@ width: 89%;
 
   .search-form{
     display: flex;
-    margin-right: 15px;
+    margin-left: 7%;
     background-color: rgba(140, 135, 135, 0.228);
     border-radius: 10px;
   }
