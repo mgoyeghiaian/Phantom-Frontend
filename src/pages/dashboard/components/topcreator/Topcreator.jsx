@@ -1,10 +1,200 @@
 import React from 'react'
 import './Topcreator.css'
+// import Data from './static/indexx'
+import { useState } from 'react'
+import axios from 'axios'
+import { useEffect } from 'react'
+import { Link, useParams } from "react-router-dom";
 
-function Topcreator() {
-  return (
-    <div>Topcreator Dashboard</div>
-  )
+function Creator(){
+  const {id} = useParams();
+  const[creator,setCreator] = useState("");
+
+const[creators,postCreators] = useState("")
+const [data,setCreators] = useState([])
+
+
+useEffect(() => {
+  loadCreators()
+},[];
+const selectedCreator = (e) => {
+  console.log(e.target.name);
+  e.preventDefault();
+  setCreator(e.target.name)
+  }
+
+const addCreators= (e) => {
+  if(e.target.name == "bckgrndimg")
+  postCreators({...creators,[e.target.name]: e.target.files[0] });
+ else
+ postCreators({...creators,[e.target.name]: e.target.files});
+};
+
+const loadCreators = async() =>{
+const res =await axios.get ("http://localhost:3030/creator/")
+setCreators(res.data);
+};
+
+const deleteCreators =async (id) => {
+  await axios.delete("http://localhost:3030/creator/${id}")
+  loadCreators()
+  }
+ const AddCreatorsAxios = async (e) => {
+  e.preventDefault();
+  console.log("creator ","creator")
+  let formData = new FormData();
+  formData = creator;
+  console.log("creator ",creator)
+
+  const config = {
+    headers: { 'content-type': 'multipart/form-data' }
+  }
+  console.log("newCreators",formData);
+
+  try{
+    const response = await axios.post("http://localhost:3030/creator/,formData,config")
+    console.log("response",response)
+  } catch (err) {
+    console.log("error",err);
+  }
+};
+  
+return(
+  <>
+  <>
+<div className='collection'>
+Creator Dashboard<br/>
+<p className='desc'>Lorem ipsum dolor sit amet, consectetur <br/>adipiscing elit.</p>
+<a href='#form'>
+<button className=' button coll-btn' >Add</button>
+</a>
+<div className='navbar-nfts'>
+
+<button name='creators' className='btn2' onClick={selectedCreator}>Sport</button>
+</div>
+{
+<div className='nfts'>
+{data.map((item,index)=>{
+return(
+<div className='pics'key={index}>
+<img className ="nft-img" src={`http://localhost:3030/creator/${item.image}`} alt="img" /> 
+<br/>
+<div className='creator'>
+<p className='firstpart-creator' > @{item.designerName}</p>
+<p className='secondpart-creator'>Current Bid</p>
+</div>
+<div className='bid'>{item.currentBid} eth</div>
+<div className='names' >
+{item.nftName}
+</div>
+<a href='#form'>
+<button className=' button collection-button' >Update</button>
+</a>
+<button className=' button collection-button' onClick={() =>deleteNft(item._id) } >Delete</button>
+</div>
+)
+})}
+</div>
+}
+</div>
+<div className='formm' id='form'>
+<br/>
+<br/>
+<form className='first-form' onSubmit={AddNFTAxios}>
+<br/>
+<legend className='legendd'>Add NFTS</legend>
+<br/>
+<label >Enter an NFT name: <br/><input type='text' name="nftName" value={nftCollection.nftName} onChange={addNFT}></input></label>
+<br/>
+<label >Designer name: <br/><input type='text' name="designerName" value={nftCollection.designerName} onChange={addNFT}></input></label>
+<br/>
+<label>Current Bid: <br/><input type='text' name="currentBid" value={nftCollection.currentBid} onChange={addNFT}></input></label>
+<br/>
+<label id="nft-img" >NFT Image: <br/><input type='file' id="imgg" name="nftImage" value={nftCollection.image} onChange={addNFT}></input></label>
+<br/>
+<label for="type">Choose a type for the NFT:</label>
+<br/>
+<select id="typee" name="category" value={nftCollection.category} >
+<option value="art">art</option>
+<option value="sport">sport</option>
+<option value="photography">photography</option>
+<option value="pattern">pattern</option>
+</select>
+<br/>
+<br/>
+<input type="submit" value="Submit" id="submit" className='button'></input>
+<br/>
+</form>
+<form className='second-form'>
+<br/>
+<legend className='legendd'>Update NFTS</legend>
+<br/>
+<label>Enter an NFT name: <br/><input type='text'></input></label>
+<br/>
+<label>Designer name: <br/><input type='text'></input></label>
+<br/>
+<label>Current Bid: <br/><input type='text'></input></label>
+<br/>
+<label id="nft-imgg">NFT Image: <br/><input type='file' id="imgg"></input></label>
+<br/>
+<label for="type">Choose a type for the NFT:</label>
+<br/>
+<select id="typeee" name="category">
+<option value="art">art</option>
+<option value="sport">sport</option>
+<option value="photography">photography</option>
+<option value="pattern">pattern</option>
+</select>
+<br/>
+<br/>
+<input type="submit" value="Update" id="submitt" className='button'></input>
+<br/>
+</form>
+</div>
+</>
+)
 }
 
-export default Topcreator
+  
+  
+  
+  
+  
+  
+  
+  </>
+
+)
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export default Creator
