@@ -36,7 +36,6 @@ function Home() {
         </div>
       </div>
       <div className="hero-img">
-        <img src={Heroimg} />
       </div>
     </div>
   );

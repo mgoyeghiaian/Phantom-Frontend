@@ -1,11 +1,9 @@
 
 import React from 'react'
 import './Collection.css'
-import Data from './static/indexx'
 import { useState } from 'react'
 import axios from 'axios'
 import { useEffect } from 'react'
-import { Link, useParams } from "react-router-dom";
 
 
 function Collection() {
