@@ -1,1 +1,21 @@
 /*Only Main Styleing For the whole dashboard page*/
+.collection{
+    align-items: center;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bolder;
+}
+.collection p{
+    color: rgba(255, 255, 255, 0.464);
+}
+.nfts{
+  display: grid;
+  /* gap: 40px ; */
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px;
+  /* height: 100%; */
+  margin: auto auto;
+  width: 80%;
+   
+  
+}

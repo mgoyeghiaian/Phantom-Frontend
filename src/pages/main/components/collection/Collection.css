@@ -1,25 +1,28 @@
-/*Collection Section For The Main page  Styleing*/
-.collection{
+.colle{
     align-items: center;
-    font-size: 40px;
+    font-size: 50px;
     text-align: center;
-    color: white;
+    font-weight: bolder;
+    padding: 10px;
 }
-.collection p{
+.colle p{
     color: rgba(255, 255, 255, 0.464);
 }
-.nfts{
+.mappingdata{
   display: grid;
-  gap: 40px ;
+   gap: 40px ; 
   grid-template-columns: 1fr 1fr 1fr;
   padding: 10px;
+  /* height: 100%; */
   margin: auto auto;
   width: 80%;
    
   
 }
   .nft-img{
+
 width: 337px;
+/* height: 380px; */
 border-radius: 10px;
 
 
@@ -68,6 +71,11 @@ display: flex;
     font-size: 20px;
     line-height: 30px;
 
+}
+.coll-btn{
+    width:10%;
+    
+   /* margin-bottom: 8px; */
 }
 .bid{
     padding-left: 50%;
@@ -155,8 +163,88 @@ display: flex;
     
 }
 
-@media screen and (max-width: 1000px) {
-    .nfts{
+
+.legendd{
+    color:white;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.formm{
+
+font-size: 25px;
+line-height: 30px;
+color: rgba(255, 255, 255, 0.673);
+display: flex;
+flex-direction: row;
+margin-top: 5%;
+/* justify-content: space-around; */
+
+gap:200px;
+
+
+}  
+.first-form{
+   
+    border-radius: 10px;
+    background-color: #2f3454;
+    align-items: center;
+display: flex;
+flex-direction: column;
+width:600px;
+
+}
+.second-form{
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #2f3454;
+    margin-left: 40px;
+    width:600px;
+    }
+
+
+ 
+#nft-img{
+   margin-left: 170px;
+}
+#nft-imgg{
+    margin-left: 170px;
+ }
+
+
+#typee{
+    height:35px;
+    font-size: 20px;
+    width: 20%;
+}
+#imgg{
+    height:35px;
+    font-size: 20px;
+}
+#submit{
+    height:35px;
+    font-size: 20px;
+    align-items: center;
+    width: 20%;
+}
+
+#typeee{
+    height:35px;
+    font-size: 20px;
+    width: 20%;
+}
+
+#submitt{
+    height:35px;
+    font-size: 20px;
+    align-items: center;
+    width: 20%;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .mappingdata{
         display: grid;
         gap: 40px ;
         grid-template-columns: 1fr ;
@@ -213,4 +301,42 @@ display: flex;
         margin: 5px;
         
     }
+    .coll-btn{
+        width:25%;
+        
+       /* margin-bottom: 8px; */
+    }
+
+    .formm{
+
+        font-size: 25px;
+        line-height: 30px;
+        color: rgba(255, 255, 255, 0.673);
+        display: flex;
+        flex-direction: column;
+        
+        }  
+        .first-form{
+            margin-left: 10%;
+        
+        
+        }
+        .second-form{
+             margin-left: 10%;
+           
+            
+            }
+
+            #typee{
+                height:35px;
+                font-size: 20px;
+                width: 20%;
+            }
+          
+            #submit{
+                height:35px;
+                font-size: 20px;
+                align-items: center;
+                width: 35%;
+            }
 }

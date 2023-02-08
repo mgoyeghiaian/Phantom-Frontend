@@ -1,1 +1,121 @@
-/*Fartwork Section For The Main page  Styleing*/
+.colle{
+  align-items: center;
+  font-size: 50px;
+  text-align: center;
+  font-weight: bolder;
+  padding: 10px;
+  color: #fff;
+}
+.colle p{
+  color: rgba(255, 255, 255, 0.464);
+}
+.mappingdata{
+display: grid;
+ gap: 40px ; 
+grid-template-columns: 1fr 1fr 1fr;
+padding: 10px;
+/* height: 100%; */
+margin: auto auto;
+width: 80%;
+ 
+
+}
+.nft-img{
+
+width: 337px;
+/* height: 380px; */
+border-radius: 10px;
+
+
+}   
+
+.pics{
+  width: 100%;
+  height: 100%;
+  background-color: #2f3454;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+
+  
+}
+.names{
+  color: white;
+  display: flex;
+  padding-left: 13%;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+}
+.creator{
+display: flex;
+
+}
+.firstpart-creator{
+padding-left: 13%;
+color: rgba(255, 255, 255, 0.5);
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+
+}
+.secondpart-creator{
+  padding-left: 30%;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+
+}
+
+.bid{
+  padding-left: 50%;
+  color: white;
+  /* color: rgba(255, 255, 255, 0.5); */
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+}
+.collection-button{
+  width: 70%;
+  height: 7%;
+}
+.desc{
+  font-size: 20px;
+  color: white;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+  .mappingdata{
+      display: grid;
+      gap: 40px ;
+      grid-template-columns: 1fr ;
+      padding: 10px;
+      /* height:400px; */
+      margin: auto auto;
+      width: 80%;
+  }
+
+
+  .coll-btn{
+      width:25%;
+      
+     /* margin-bottom: 8px; */
+  }
+
+}
