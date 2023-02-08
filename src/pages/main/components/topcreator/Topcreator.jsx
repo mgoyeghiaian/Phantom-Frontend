@@ -13,7 +13,7 @@ function TopCreator() {
   }, []);
 
   const fetchingCreators = async () => {
-    const response = await fetch("/creator");
+    const response = await axios.get ("http://localhost:3030/nft/nfts");
     const data = response.json();
     console.log(data);
     setCreator(data);
