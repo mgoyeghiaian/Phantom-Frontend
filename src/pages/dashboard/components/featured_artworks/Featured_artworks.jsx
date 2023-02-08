@@ -1,6 +1,8 @@
 
-function Featured_artworks() {
 
-}
+
+function Featured_artworks() {
+    
+  }
 
 export default Featured_artworks

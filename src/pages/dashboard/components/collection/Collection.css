@@ -1,16 +1,17 @@
-/*Collection Section For The Dashboard page Styleing*/
-.collection{
+/* Collection Section For The Dashboard page Styleing */
+.colle{
     align-items: center;
     font-size: 50px;
     text-align: center;
     font-weight: bolder;
+    padding: 10px;
 }
-.collection p{
+.colle p{
     color: rgba(255, 255, 255, 0.464);
 }
-.nfts{
+.mappingdata{
   display: grid;
-  /* gap: 40px ; */
+   gap: 40px ; 
   grid-template-columns: 1fr 1fr 1fr;
   padding: 10px;
   /* height: 100%; */
@@ -190,7 +191,7 @@ gap:200px;
     align-items: center;
 display: flex;
 flex-direction: column;
-
+width:600px;
 
 }
 .second-form{
@@ -200,6 +201,7 @@ flex-direction: column;
     flex-direction: column;
     background-color: #2f3454;
     margin-left: 40px;
+    width:600px;
     }
 
 
@@ -242,8 +244,8 @@ flex-direction: column;
 }
 
 
-@media screen and (max-width: 1000px) {
-    .nfts{
+@media screen and (max-width: 1200px) {
+    .mappingdata{
         display: grid;
         gap: 40px ;
         grid-template-columns: 1fr ;
@@ -317,12 +319,13 @@ flex-direction: column;
         }  
         .first-form{
             margin-left: 10%;
+            width: 380px;
         
         
         }
         .second-form{
              margin-left: 10%;
-           
+             width: 380px;
             
             }
 

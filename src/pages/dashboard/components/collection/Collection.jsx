@@ -134,7 +134,7 @@ function Collection({match}) {
 
   return (
     <>
-    <div className='collection'>
+    <div className='colle'>
       Collection Dashboard<br/>
       <p className='desc'>Lorem ipsum dolor sit amet, consectetur <br/>adipiscing elit.</p>
       <a href='#form'>
@@ -149,7 +149,7 @@ function Collection({match}) {
       </div>
       {
      
-      <div className='nfts'>
+      <div className='mappingdata'>
         {data.filter(item=>item.category===collection).map((item,index)=>{
           
         return(
@@ -187,18 +187,18 @@ function Collection({match}) {
     <legend className='legendd'>Add NFTS</legend>
     <br/>
    
-    <label >Enter an NFT name: <br/><input type='text' name="nftName" value={nftCollection.nftName} onChange={addNFT} ></input></label>
+    <label >Enter an NFT name: <br/><input type='text' name="nftName" value={nftCollection.nftName} onChange={addNFT} required></input></label>
     <br/>
-    <label >Designer name: <br/><input type='text' name="designerName" value={nftCollection.designerName} onChange={addNFT}></input></label>
+    <label >Designer name: <br/><input type='text' name="designerName" value={nftCollection.designerName} onChange={addNFT} required></input></label>
     <br/>
-    <label>Current Bid: <br/><input type='text' name="currentBid" value={nftCollection.currentBid} onChange={addNFT}></input></label>
+    <label>Current Bid: <br/><input type='text' name="currentBid" value={nftCollection.currentBid} onChange={addNFT} required></input></label>
     <br/>
-    <label id="nft-img" >NFT Image: <br/><input type='file' id="imgg" name="nftImage" value={nftCollection.image} onChange={addNFT}></input></label>
+    <label id="nft-img" >NFT Image: <br/><input type='file' id="imgg" name="nftImage" value={nftCollection.image} onChange={addNFT} required></input></label>
     <br/>
     <label for="type">Choose a type for the NFT:</label>
     <br/>
   <select id="typee" name="category" value={nftCollection.category} onChange={addNFT} >
-    <option value="art">art</option>
+    <option value="art" selected>art</option>
     <option value="sport">sport</option>
     <option value="photography">photography</option>
     <option value="pattern">pattern</option>
@@ -226,8 +226,8 @@ function Collection({match}) {
     <br/>  */}
     <label for="type">Choose a type for the NFT:</label>
     <br/>
-  <select id="typeee" name="category" value={category} onChange={(e) => setNftcategory(e.target.value)}>
-    <option value="art" >art</option>
+  <select id="typeee" name="category" value={category} onChange={(e) => setNftcategory(e.target.value)} >
+    <option value="art" selected>art</option>
     <option value="sport" >sport</option>
     <option value="photography" >photography</option>
     <option value="pattern" >pattern</option>

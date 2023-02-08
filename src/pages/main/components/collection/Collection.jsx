@@ -44,7 +44,7 @@ function Collection() {
   return (
     <>
     <body>
-    <div className='collection'>Collection <br/><p className='desc'>Lorem ipsum dolor sit amet, consectetur <br/>adipiscing elit.</p>
+    <div className='colle'>Collection <br/><p className='desc'>Lorem ipsum dolor sit amet, consectetur <br/>adipiscing elit.</p>
    
     
     </div>
@@ -56,7 +56,7 @@ function Collection() {
     </div>
     {
      
-      <div className='nfts'>
+     <div className='mappingdata'>
     {data.filter(item=>item.category===collection).map((item,index)=>{
           
           return(
