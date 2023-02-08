@@ -2,17 +2,19 @@ import React from 'react'
 import './AddUser.css'
 import { Link } from 'react-router-dom'
 import { HiHome } from "@react-icons/all-files/hi/HiHome";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 function AddUser() {
 
 
-
+  /**  initialize username , password , Error Message And added successfully Message */
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [message, setMessage] = useState('');
+
+  /** Posting The New Username and password To the database  */
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -41,7 +43,22 @@ function AddUser() {
 
     }
 
+    /** to make the error message & the message dispeare after 2 sec */
   }
+  useEffect(() => {
+    if (!errorMessage && !message) {
+      return;
+    }
+
+    const timeoutId = setTimeout(() => {
+      setErrorMessage("");
+      setMessage('');
+    }, 2000);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [errorMessage, message]);
   return (
     <>
       <div className='adduser'>

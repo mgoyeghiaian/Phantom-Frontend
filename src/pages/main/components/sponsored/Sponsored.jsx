@@ -8,9 +8,9 @@ import Blockchain from '../../../../assets/sponsored/Blockchain.svg'
 function Sponsored() {
   return (
     <div className='sponsord-body'>
-      <img src={Binance} />
-      <img src={Ethereum} />
-      <img src={Blockchain} />
+      <img alt='Binance' src={Binance} />
+      <img alt='Ethereum' src={Ethereum} />
+      <img alt='Blockchain' src={Blockchain} />
     </div>
   )
 }

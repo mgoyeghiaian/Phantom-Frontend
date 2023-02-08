@@ -1,3 +1,4 @@
+
 import AddUser from './components/addUser/AddUser'
 import Collection from './components/collection/Collection'
 import Faq from './components/FAQ/Faq'
@@ -11,9 +12,9 @@ function Dashboard() {
     <div>
       <AddUser />
       <section><Collection /></section>
-      <section><FeaturedArtworks /></section>
+       <section><FeaturedArtworks /></section>
       <section><Topcreator /></section>
-      <section><Faq /></section>
+      <section><Faq /></section> 
 
     </div>
 

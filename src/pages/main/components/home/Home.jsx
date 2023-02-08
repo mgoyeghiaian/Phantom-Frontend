@@ -19,7 +19,7 @@ function Home() {
         </div>
       </div>
       <div className="hero-img">
-        <img src={Heroimg} />
+        <img alt="Hero" src={Heroimg} />
       </div>
       <div className="hero-numbers">
         <a href="#collection"> <button className="hero-button button">Explore</button></a>

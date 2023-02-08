@@ -10,7 +10,7 @@ function Footer() {
     <div className='footer'>
       <div className='footer-logo'>
         <div>
-          <img src={Logo} />
+          <img alt='Phantom' src={Logo} />
         </div>
         <p>
           The best NFT marketplace website in the world and feel your experience in selling or buy our work
@@ -18,33 +18,33 @@ function Footer() {
       </div>
       <div className='footer-about'>
         <h1> About</h1>
-        <p>Product</p>
-        <p>Resource</p>
-        <p>Term & Condition</p>
-        <p>FAQ</p>
+        <a href='#collection'>Product</a>
+        <a href='#Res'>Resource</a>
+        <a href='#Term'>Term & Condition</a>
+        <a href='#faq'>FAQ</a>
       </div>
       <div className='footer-company'>
         <h1>Company</h1>
-        <p>Our Team</p>
-        <p>Partner With Us</p>
-        <p>Privacy & Policy</p>
-        <p>Fratures</p>
+        <a href='#OurTeam'>Our Team</a>
+        <a href='#Partner'>Partner With Us</a>
+        <a href='#Privacy'>Privacy & Policy</a>
+        <a href='#featuredartworks'>Fratures</a>
       </div>
       <div className='footer-contact' >
         <h1>Contact</h1>
-        <p>+012 3456789</p>
-        <p>adorableprogrammer@gmail.com</p>
+        <a href='tel:+0123456789'>+012 3456789</a>
+        <a href="mailto:adorableprogrammer@gmail.com">adorableprogrammer@gmail.com</a>
       </div>
       <div className='icons'>
-        <img src={Youtube} />
-        <img src={Discord} />
-        <img src={Instagram} />
+        <a href='https://youtube.com' target='_blank' rel="noreferrer"> <img alt='Youtube' src={Youtube} /></a>
+        <a href='https://Discord.com' target='_blank' rel="noreferrer">    <img alt='Discord' src={Discord} /></a>
+        <a href='https://Instagram.com' target='_blank0' rel="noreferrer"> <img alt='Instagram' src={Instagram} /></a>
       </div>
       <div className='footer-copy'>
         <p>Created by TEAM 3 ||  Right Reserved! </p>
       </div>
 
-    </div >
+    </div>
   )
 }
 export default Footer
