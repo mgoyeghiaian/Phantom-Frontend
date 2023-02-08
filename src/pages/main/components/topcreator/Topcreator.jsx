@@ -13,46 +13,24 @@ function TopCreator() {
   }, []);
 
   const fetchingCreators = async () => {
-    const response = await axios.get ("http://localhost:3030/nft/nfts");
-    const data = response.json();
-    console.log(data);
-    setCreator(data);
+    const response = await axios.get("http://localhost:3030/creators/");
+  
+    console.log(response.data);
+    setCreator(response.data);
     console.log("Hello");
   };
 
-  // const [creator, setCreators] = useState([]);
-
-  // useEffect(() => {
-  //   // setIsLoading(true);
-  //   fetchCreators();
-  // }, []);
-
-  // const fetchCreators = async () => {
-  //   try {
-  //     const res = await fetch("/creator", {
-  //       method: "GET",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //     });
-  //     const resJson = await res.json();
-  //     setCreators(resJson.data);
-  //     console.log("The creator", creator);
-  //   } catch (error) {
-  //     console.log("This is an error", error);
-  //   }
-  // };
 
   return (
     <>
       <div className="Main-creator">
         <div className="Top-creator">
           <div className="nfts">
-            {creator.map((item) => {
+            {creator.map((item,index) => {
               return (
                 // Section One
 
-                <div className="card-container-creator" key={item._id}>
+                <div className="card-container-creator" key={index}>
                   <div className="card-section-one">
                     <div className="backgroundcreator">
                       <img className="nft-img" src={item.bckgrndimg} alt="" />
@@ -64,8 +42,8 @@ function TopCreator() {
 
                   <div className="card-section-two">
                     <div className="Description-creator">
-                      <div>{item.name}</div>
-                      <div>{item.descrip}</div>
+                      <div>{item.creatorName}</div>
+                      <div>{item.description}</div>
                       <div>
                         <button className="button creator-button">
                           +Follow
