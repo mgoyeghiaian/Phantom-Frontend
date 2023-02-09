@@ -1,4 +1,16 @@
 /*Top Creator  Section For The Dashboard Styleing*/
-.card-container-creator-dashboard{
-    background-color: black;
+.main-creator-dashboard{
+    display:flex;
+    
+}
+
+.add-creator{
+ background-color: black;
+
+}
+
+.update-creator{
+    background-color: red;
+    width: 100%;
+
 }

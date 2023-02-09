@@ -1,5 +1,5 @@
 import React from "react";
-import './Topcreator.css'
+import "./Topcreator.css";
 // import Data from './static/indexx'
 import { useState } from "react";
 import axios from "axios";
@@ -8,6 +8,8 @@ import { Link, useParams } from "react-router-dom";
 
 function Creator() {
   const [creator, setCreator] = useState([]);
+  const [creatorName, setCreatorName] = useState("");
+  const [creatorDescription, setCreatorDescription] =useState("");
 
   useEffect(() => {
     fetchingCreators();
@@ -23,51 +25,103 @@ function Creator() {
 
   return (
     <>
-      <div className="Main-creator-dashboard">
-        <div className="Top-creator-dashboard">
-          <div className="nfts--creator-dashboard">
-            {creator.map((item, index) => {
-              return (
-                // Section One
-                // Add creator
-                //items
-                // creator name
-                // background image
-                // creator image
-                // description
+      <dev className="main-creator-dashboard">
+        {/* SECTION ADD CREATOR */}
+        <dev className="Add-creator">
+          <form className="first-table">
+            <br />
+            <legend className="legendd-creator-dashboard">Add Creator</legend>
+            <br />
+            <label>
+              Enter an Creator name:
+              <br />
+              <input
+                type="text"
+                value={creatorName}
+                onChange={(e) => {
+                  setCreatorName(e.target.value);
+                  console.log(creatorName);
+                }}
+              />
+            </label>
+            <br />
+            <label>
+              Creator description <br />
+              <input type="text"
+              value={creatorDescription}
+              onChange={(e) => {
+                setCreatorDescription(e.target.value);
+              console.log(creatorDescription)}}
+              ></input>
+            </label>
+            <br />
+            <label className="creator-image-dashboard">
+              Creator Image:
+              <br />
+              <input type="file"></input>
+            </label>
+            <br />
+            <label className="creator-background-dashboard">
+              {" "}
+              background Image:
+              <br />
+              <input type="file"></input>
+            </label>
+            <br />
 
-                <div className="card-container-creator-dashboard" key={index}>
-                  <div className="card-section-one-dashboard">
-                    <div className="backgroundcreator-dashboard">
-                      <img className="nft-img" src={item.bckgrndimg} alt="" />
-                    </div>
-                    <div className="image-creator-dashboard">
-                      <img src={item.creatorimg} alt="" />
-                    </div>
-                  </div>
-                  {/* Section two
-                update creator */}
+            <input
+              type="submit"
+              value="Submit"
+              id="submit"
+              className="button"
+            ></input>
+            <br />
+          </form>
+        </dev>
 
-                  <div className="card-section-two-dashboard">
-                    <div className="Description-creator-dashboard">
-                      <div>{item.creatorName}</div>
-                      <div>{item.description}</div>
-                      <div>
-                        <button className="button creator-button-dashboard">
-                          Update
-                        </button>
-                        <button className="button creator-button-dashboard">
-                          Delete
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </div>
+        {/* // SECOND FORM */}
+
+        <dev className="update-creator">
+          <form className="second-table">
+            <br />
+            <legend className="legendd-creator-dashboard">
+              Update Creator
+            </legend>
+            <br />
+            <label>
+              Enter an Creator name: <br />
+              <input type="text"></input>
+            </label>
+            <br />
+            <label>
+              Creator description <br />
+              <input type="text"></input>
+            </label>
+            <br />
+            <label className="creator-image-dashboard">
+              Creator Image:
+              <br />
+              <input type="file"></input>
+            </label>
+            <br />
+            <label className="creator-background-dashboard">
+              {" "}
+              background Image:
+              <br />
+              <input type="file"></input>
+            </label>
+            <br />
+
+            <input
+              type="submit"
+              value="Submit"
+              id="submit"
+              className="button"
+            ></input>
+            <br />
+          </form>
+        </dev>
+      </dev>
     </>
   );
 }
