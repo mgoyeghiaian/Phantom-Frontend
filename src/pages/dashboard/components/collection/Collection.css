@@ -160,9 +160,7 @@ display: flex;
     line-height: 35px;
     background-color:#2f3454;
     width: 350px;
-    margin-right: 10%;
-    
-    
+    margin-right: 10%; 
 }
 
 
@@ -179,8 +177,6 @@ color: rgba(255, 255, 255, 0.673);
 display: flex;
 flex-direction: row;
 margin-top: 5%;
-/* justify-content: space-around; */
-
 gap:200px;
 
 
@@ -250,10 +246,7 @@ width:600px;
         display: grid;
         gap: 40px ;
         grid-template-columns: 1fr ;
-        padding: 10px;
-        /* height:400px; */
-        margin: auto auto;
-        width: 80%;
+        width: 90%;
     }
     .btn4{
         border-radius: 10px;
@@ -305,9 +298,7 @@ width:600px;
     }
     .coll-btn{
         width:25%;
-        
-       /* margin-bottom: 8px; */
-    }
+            }
 
     .formm{
 
@@ -330,6 +321,10 @@ width:600px;
             
             }
 
+            #imgg{
+                width:100%
+            }
+
             #typee{
                 height:35px;
                 font-size: 20px;
@@ -342,4 +337,9 @@ width:600px;
                 align-items: center;
                 width: 35%;
             }
+
+            #nft-img{
+                margin-left: 20px;
+             }
+           
 }

@@ -70,6 +70,8 @@ hr{
 
 
   .faq-container{
+    width: 95%;
+    margin-left: 2%;
     display: grid;
     grid-template-columns: 100%;
 color: white;
