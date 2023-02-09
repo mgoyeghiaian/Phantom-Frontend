@@ -8,9 +8,7 @@ import { Link, useParams } from "react-router-dom";
 
 function Creator() {
   const [creator, setCreator] = useState([]);
-  const [creatorName, setCreatorName] = useState("");
-  const [creatorDescription, setCreatorDescription] =useState("");
-  const [creatorCollection,setcreatorCollection] = usestate("")
+  const [creatorCollection, postCollection] = useState("");
 
   useEffect(() => {
     fetchingCreators();
@@ -24,10 +22,10 @@ function Creator() {
     console.log("Hello");
   };
   const addCreator = (e) => {
-    if (e.target.name == "imagess") {
-      postNft({ ...creatorCollection, [e.target.name]: e.target.files[0] });
+    if (e.target.name == "creatorimg" || e.target.name == "bckgrndimg" ) {
+      postCollection({ ...creatorCollection, [e.target.name]: e.target.files[0] });
       console.log(creatorCollection);
-    } else postNft({ ...creatorCollection, [e.target.name]: e.target.value });
+    } else postCollection({ ...creatorCollection, [e.target.name]: e.target.value });
   };
 
   return (
@@ -44,22 +42,24 @@ function Creator() {
               <br />
               <input
                 type="text"
-                name = ""
-                value={creatorName}
-                onChange={(e) => {
-                  setCreatorName(e.target.value);
-                  console.log(creatorName);
-                }}
+               
+                name = "name"
+                value= {creatorCollection.name}
+                onchange = {addCreator}
+                
+                
               />
             </label>
             <br />
             <label>
               Creator description <br />
               <input type="text"
-              value={creatorDescription}
-              onChange={(e) => {
-                setCreatorDescription(e.target.value);
-              console.log(creatorDescription)}}
+              name= "descrip"
+              value = {creatorCollection.descrip}
+              onchange = {addCreator}
+
+
+              
               ></input>
             </label>
             <br />
@@ -68,7 +68,7 @@ function Creator() {
               <br />
               <input type="file"
               id="pics"
-              name="imagess"
+              name="creatorimg"
               value = {creatorCollection.image}
               onChange = {addCreator}
               ></input>
@@ -80,7 +80,7 @@ function Creator() {
               <br />
               <input input type="file"
               id="pics"
-              name="imagess"
+              name="bckgrndimg"
               value = {creatorCollection.image}
               onChange = {addCreator}></input>
             </label>
@@ -89,7 +89,7 @@ function Creator() {
             <input
               type="submit"
               value="Submit"
-              id="submit"
+              id="submitss"
               className="button"
             ></input>
             <br />
@@ -131,7 +131,7 @@ function Creator() {
 
             <input
               type="submit"
-              value="Submit"
+              value="Update"
               id="submit"
               className="button"
             ></input>
