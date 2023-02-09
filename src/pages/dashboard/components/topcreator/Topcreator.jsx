@@ -10,6 +10,7 @@ function Creator() {
   const [creator, setCreator] = useState([]);
   const [creatorName, setCreatorName] = useState("");
   const [creatorDescription, setCreatorDescription] =useState("");
+  const [creatorCollection,setcreatorCollection] = usestate("")
 
   useEffect(() => {
     fetchingCreators();
@@ -21,6 +22,12 @@ function Creator() {
     console.log(response.data);
     setCreator(response.data);
     console.log("Hello");
+  };
+  const addCreator = (e) => {
+    if (e.target.name == "imagess") {
+      postNft({ ...creatorCollection, [e.target.name]: e.target.files[0] });
+      console.log(creatorCollection);
+    } else postNft({ ...creatorCollection, [e.target.name]: e.target.value });
   };
 
   return (
@@ -37,6 +44,7 @@ function Creator() {
               <br />
               <input
                 type="text"
+                name = ""
                 value={creatorName}
                 onChange={(e) => {
                   setCreatorName(e.target.value);
@@ -58,14 +66,23 @@ function Creator() {
             <label className="creator-image-dashboard">
               Creator Image:
               <br />
-              <input type="file"></input>
+              <input type="file"
+              id="pics"
+              name="imagess"
+              value = {creatorCollection.image}
+              onChange = {addCreator}
+              ></input>
             </label>
             <br />
             <label className="creator-background-dashboard">
               {" "}
               background Image:
               <br />
-              <input type="file"></input>
+              <input input type="file"
+              id="pics"
+              name="imagess"
+              value = {creatorCollection.image}
+              onChange = {addCreator}></input>
             </label>
             <br />
 
