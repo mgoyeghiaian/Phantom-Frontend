@@ -31,7 +31,7 @@ function Collection() {
 
 
   const loadNft = async () => {
-    const res = await axios.get("http://localhost:3030/nft/nfts/")
+    const res = await axios.get("https://phantom-rk5i.onrender.com/nft/nfts/")
 
     console.log(res.data);
     setNft(res.data);
@@ -60,7 +60,7 @@ function Collection() {
 
                 <div className='pics' key={index}>
                   <div className='sizeofimage'>
-                    <img className="nft-img" src={`http://localhost:3030/nft/nfts/${item.image}`} alt="img" />
+                    <img className="nft-img" src={`https://phantom-rk5i.onrender.com/nft/nfts/${item.image}`} alt="img" />
                     <br />
                   </div>
                   <div className='infopart'>

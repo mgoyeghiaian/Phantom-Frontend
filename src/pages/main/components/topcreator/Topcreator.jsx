@@ -12,7 +12,7 @@ function Topcreator() {
   }, []);
 
   const loadCreator = async () => {
-    const res = await axios.get("http://localhost:3030/creators");
+    const res = await axios.get("https://phantom-rk5i.onrender.com/creators");
     setCreator(res.data);
   };
 
@@ -32,10 +32,10 @@ function Topcreator() {
             return (
               <div className='pics' key={index}>
                 <div className='sizeofimage'>
-                  <img className="nft-img" src={`http://localhost:3030/creators/${item.bckgrndimg}`} alt="backgroundImage" />
+                  <img className="nft-img" src={`https://phantom-rk5i.onrender.com//${item.bckgrndimg}`} alt="backgroundImage" />
                   <br />
                 </div>
-                <img className="nft-img" src={`http://localhost:3030/creators/${item.creatorimg}`} alt="creatorImage" />
+                <img className="nft-img" src={`https://phantom-rk5i.onrender.com//${item.creatorimg}`} alt="creatorImage" />
                 <div className='infopart'>
                   <div className='creator'>
                     <p className='firstpart-creator'>{item.creatorName}</p>

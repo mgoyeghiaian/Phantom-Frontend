@@ -26,7 +26,7 @@ function Topcreator() {
     formData.append("bckgrndimg", bckgrndimg);
 
     try {
-      await axios.post("http://localhost:3030/creators", formData);
+      await axios.post("https://phantom-rk5i.onrender.com/creators", formData);
       alert("Post submitted successfully!");
       window.location.reload(true);
 
@@ -40,7 +40,7 @@ function Topcreator() {
 
 
   const loadCreator = async () => {
-    const res = await axios.get("http://localhost:3030/creators")
+    const res = await axios.get("https://phantom-rk5i.onrender.com/creators")
     setCreator(res.data);
 
 
@@ -49,7 +49,7 @@ function Topcreator() {
 
 
   const deleteCreator = async (id) => {
-    await axios.delete(`http://localhost:3030/creators/${id}`)
+    await axios.delete(`https://phantom-rk5i.onrender.com/creators/${id}`)
     loadCreator()
     alert("You have delete it!")
     window.location.reload(true);
@@ -74,10 +74,10 @@ function Topcreator() {
                 <div className='pics' key={index}>
                   <div className='sizeofimage'>
 
-                    <img className="nft-img" src={`http://localhost:3030/creators/${item.bckgrndimg}`} alt="backgroundImage" />
+                    <img className="nft-img" src={`https://phantom-rk5i.onrender.com/creators/${item.bckgrndimg}`} alt="backgroundImage" />
                     <br />
                   </div>
-                  <img className="creator-img" src={`http://localhost:3030/creators/${item.creatorimg}`} alt="creatorImage" />
+                  <img className="creator-img" src={`https://phantom-rk5i.onrender.com/creators/${item.creatorimg}`} alt="creatorImage" />
                   <div className='infopart'>
                     <div className='creator'>
                       <p className='firstpart-creator' > {item.creatorName}</p>

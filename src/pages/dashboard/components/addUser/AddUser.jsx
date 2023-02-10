@@ -68,12 +68,14 @@ function AddUser() {
         <h2>Add New User:</h2>
         {errorMessage && <p className='error-dash' > {errorMessage}</p>}
         {message && <p className='sucsess-dash'>{message}</p>}
-        <form onSubmit={handleSubmit} className='adduser-form'>
+        <form autocomplete="off"
+          onSubmit={handleSubmit} className='adduser-form'>
           <label htmlFor="username" onsubmit="return "> Username :</label>
           <input type="text"
             onChange={(e) => setUsername(e.target.value)} value={username} placeholder='Username' />
           <label htmlFor="password">Password:</label>
-          <input type="password" value={password}
+          <input type="password" autoComplete="new-password"
+            value={password}
             placeholder='Password'
             onChange={(e) => setPassword(e.target.value)} />
           <button className="adduser-button button" type="submit">Add User</button>

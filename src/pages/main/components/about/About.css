@@ -5,7 +5,6 @@
   grid-template-rows: auto 10px;
   place-items: center;
   color: #fff;
-
 margin-bottom: 250px;  
   }
   .about-header
@@ -71,7 +70,7 @@ margin-bottom: 250px;
    place-items: center;
    grid-template-columns: 100%;
   grid-template-rows: auto auto auto auto;
-  height: 90rem;
+  height: 100%;
   margin-bottom: 300px;
   
   }
@@ -81,7 +80,6 @@ margin-bottom: 250px;
     margin-top: 20%;
     text-align: center;
   display: block;
-
   grid-row-start: 1;
 }
 .about-img {
@@ -117,13 +115,10 @@ margin-bottom: 250px;
     place-items: center;
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto auto;
-    height: 190vh;
-    margin-bottom: 30%;
   }
 
   .about-header {
     margin-top: 20%;
-
     text-align: center;
     display: block;
     grid-row-start: 1;
@@ -146,6 +141,7 @@ margin-bottom: 250px;
     grid-row-start: 3;
   }
   .about-button {
+    margin-top: 8%;
     grid-row-start: 4;
     grid-column-start: 1;
     justify-self: center;

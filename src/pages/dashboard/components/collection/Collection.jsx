@@ -52,14 +52,14 @@ function Collection({ match }) {
 
 
   const loadNft = async () => {
-    const res = await axios.get("http://localhost:3030/nft/nfts/")
+    const res = await axios.get("https://phantom-rk5i.onrender.com/nft/nfts/")
     setNft(res.data);
 
 
   };
 
   const loadNftbyId = async (id) => {
-    const res = await axios.get(`http://localhost:3030/nft/nftss/${id}`)
+    const res = await axios.get(`https://phantom-rk5i.onrender.com/nft/nftss/${id}`)
     console.log(res);
     setNftNamee(res.data.nftName);
     setNftdesigner(res.data.designerName)
@@ -71,7 +71,7 @@ function Collection({ match }) {
   };
 
   const deleteNft = async (id) => {
-    await axios.delete(`http://localhost:3030/nft/nfts/${id}`)
+    await axios.delete(`https://phantom-rk5i.onrender.com/nft/nfts/${id}`)
     loadNft()
     alert("You have update it!")
     window.location.reload(true);
@@ -91,7 +91,7 @@ function Collection({ match }) {
     console.log("newNFT ", formData);
 
     try {
-      const response = await axios.post("http://localhost:3030/nft/nfts/", formData, config);
+      const response = await axios.post("https://phantom-rk5i.onrender.com/nft/nfts/", formData, config);
       alert("You have add an Nft it!")
       window.location.reload(true);
       console.log("response ", response)
@@ -111,7 +111,7 @@ function Collection({ match }) {
 
     try {
       console.log("id" + idd)
-      const response = await axios.put(`http://localhost:3030/nft/nfts/${idd}`, {
+      const response = await axios.put(`https://phantom-rk5i.onrender.com/nft/nfts/${idd}`, {
         nftName,
         designerName,
         currentBid,
@@ -152,7 +152,7 @@ function Collection({ match }) {
 
                 <div className='pics' key={index}>
                   <div className='sizeofimage'>
-                    <img className="nft-img" src={`http://localhost:3030/nft/nfts/${item.image}`} alt="img" />
+                    <img className="nft-img" src={`https://phantom-rk5i.onrender.com/nft/nfts/${item.image}`} alt="img" />
                     <br />
                   </div>
 

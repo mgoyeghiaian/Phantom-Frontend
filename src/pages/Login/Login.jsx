@@ -17,7 +17,7 @@ function Login() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch("http://localhost:3030/login", {
+      const response = await fetch("https://phantom-rk5i.onrender.com/login", {
         method: 'POST',
         headers: ({ 'Content-Type': 'application/json' }),
         body: JSON.stringify({ username, password }),
@@ -103,13 +103,15 @@ function Login() {
       <div className="login-body">
         <div className="wrapper">
           <div className="form-wrapper">
-            <form action="" onSubmit={handleSubmit} >
+            <form autocomplete="off"
+              action="" onSubmit={handleSubmit} >
               <div className="input-group">
                 <input type='text' onChange={(e) => setUsername(e.target.value)} value={username} />
                 <label htmlFor="username"> Username</label>
               </div>
               <div className="input-group" >
-                <input type='password' value={password}
+                <input type='password' autoComplete="new-password"
+                  value={password}
                   onChange={(e) => setPassword(e.target.value)} />
                 <label htmlFor="password"> Password</label>
               </div>

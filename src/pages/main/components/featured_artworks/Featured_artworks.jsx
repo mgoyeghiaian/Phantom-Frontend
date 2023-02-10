@@ -12,7 +12,7 @@ function Featured_artworks() {
   }
 
   useEffect(() => {
-    axios.get('http://localhost:3030/nft/nfts')
+    axios.get('https://phantom-rk5i.onrender.com/nft/nfts')
       .then(response => setData(response.data))
   }, []);
 
@@ -36,7 +36,7 @@ function Featured_artworks() {
             return (
               <div className='pics' key={item}>
                 <div className='sizeofimage'>
-                  <img className="nft-img" alt="artwork" src={`http://localhost:3030/nft/nfts/${item.image}`} />
+                  <img className="nft-img" alt="artwork" src={`https://phantom-rk5i.onrender.com/nft/nfts/${item.image}`} />
                   <br />
                 </div>
                 <div className='infopart'>
