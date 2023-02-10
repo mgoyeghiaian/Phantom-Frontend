@@ -25,9 +25,6 @@ function Topcreator() {
     <div className='colle'>
       Top Creator<br />
       <p className='desc'>Lorem ipsum dolor sit amet, consectetur <br />adipiscing elit.</p>
-      <a href='#form'>
-        <button className=' button coll-btn' >Add</button>
-      </a>
 
       {
 
@@ -51,7 +48,7 @@ function Topcreator() {
                   <div className='names' >
                     {item.description}
                   </div>
-                  <button className=' button collection-button' onClick={() => followCreator(item._id)} >Delete</button>
+                  <button className=' button collection-button' onClick={() => followCreator(item._id)} >+ Follow</button>
 
                 </div>
 
