@@ -2,25 +2,40 @@ import React from 'react'
 import '../collection/Collection.css'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useParams } from "react-router-dom";
+import { useParams } from 'react-router-dom'
 
 function Topcreator() {
 
+  const [creatorName, setCreatorName] = useState("");
+  const [description, setDescription] = useState("");
+  const [creatorimg, setCreatorimg] = useState(null);
+  const [bckgrndimg, setBckgrndimg] = useState(null);
+  const [data, setCreator] = useState([])
+
   const { id } = useParams();
 
-  const [cratorCollection, postcreator] = useState("")
-  const [data, setCreator] = useState([])
 
   useEffect(() => {
     loadCreator()
   }, []);
 
-  const addNFT = (e) => {
-    if (e.target.name === "creatorimg")
-      postcreator({ ...cratorCollection, [e.target.name]: e.target.files[0] });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("creatorName", creatorName);
+    formData.append("description", description);
+    formData.append("creatorimg", creatorimg);
+    formData.append("bckgrndimg", bckgrndimg);
 
-    else
-      postcreator({ ...cratorCollection, [e.target.name]: e.target.value });
+    try {
+      await axios.post("http://localhost:3030/creators", formData);
+      alert("Post submitted successfully!");
+      window.location.reload(true);
+
+    } catch (error) {
+      console.error(error);
+      alert("Failed to submit post.");
+    }
   };
 
 
@@ -42,26 +57,6 @@ function Topcreator() {
     window.location.reload(true);
   }
 
-  const AddCreatorAxios = async (e) => {
-    e.preventDefault();
-    console.log("cratorCollection ", cratorCollection)
-    let formData = new FormData();
-    formData = cratorCollection;
-    console.log("cratorCollection ", cratorCollection)
-    const config = {
-      headers: { 'content-type': 'multipart/form-data' }
-    }
-    console.log("NewCreators ", formData);
-    try {
-      const response = await axios.post("http://localhost:3030/creators", formData, config);
-      alert("You Added the creator")
-      window.location.reload(true);
-      console.log("response ", response)
-    } catch (err) {
-      console.log("error", err);
-    }
-  };
-
   return (
     <>
       <div className='colle'>
@@ -80,7 +75,7 @@ function Topcreator() {
 
                 <div className='pics' key={index}>
                   <div className='sizeofimage'>
-                    
+
                     <img className="nft-img" src={`http://localhost:3030/creators/${item.bckgrndimg}`} alt="backgroundImage" />
                     <br />
                   </div>
@@ -109,29 +104,45 @@ function Topcreator() {
         <br />
         <br />
 
-        <form className='first-form' onSubmit={AddCreatorAxios}>
+        <form className='first-form' onSubmit={handleSubmit}>
           <br />
           <legend className='legendd'>Add Creator</legend>
           <br />
-          <label > Top Creator Name: <br /><input type='text' name="creatorName" value={cratorCollection.creatorName} onChange={addNFT} required></input></label>
+          <label > Top Creator Name: <br /> <input
+            value={creatorName}
+            onChange={(e) => setCreatorName(e.target.value)}
+            placeholder="Enter text"
+          /></label>
           <br />
-          <label >Discription: <br /><input type='text' name="designerName" value={cratorCollection.description} onChange={addNFT} required></input></label>
+          <label >Discription: <br /> <input
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            placeholder="Enter text"
+          /></label>
           <br />
           <br />
-          <label id="nft-img" >background Image: <br /><input type='file' id="imgg" name="nftImage" value={cratorCollection.bckgrndimg} onChange={addNFT} required></input></label>
+          <label id="nft-img" >background Image: <br /><input
+            type="file"
+            id="imgg"
+            onChange={(e) => setCreatorimg(e.target.files[0])}
+          />
+          </label>
           <br />
-          <br />
-          <label id="nft-img" >designer Image: <br /><input type='file' id="imgg" name="nftImage" value={cratorCollection.creatorimg} onChange={addNFT} required></input></label>
-          <br />
+          <label id="nft-img" >Creator Image: <br />
+            <br />
+            <input
+              id="imgg"
+              type="file"
+              onChange={(e) => setBckgrndimg(e.target.files[0])}
+            />
+          </label>
           <br />
           <input type="submit" value="Submit" id="submit" className='button'></input>
           <br />
+          <br />
+
         </form>
-
-
-
-
-      </div>
+      </div >
     </>
   )
 
