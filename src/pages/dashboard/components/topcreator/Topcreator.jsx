@@ -2,13 +2,14 @@ import React from 'react'
 import '../collection/Collection.css'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-
+import { useParams } from "react-router-dom";
 
 function Topcreator() {
 
+  const { id } = useParams();
 
   const [cratorCollection, postcreator] = useState("")
-  const [data, setCreatot] = useState([])
+  const [data, setCreator] = useState([])
 
   useEffect(() => {
     loadCreator()
@@ -27,17 +28,17 @@ function Topcreator() {
 
   const loadCreator = async () => {
     const res = await axios.get("http://localhost:3030/creators")
-    setCreatot(res.data);
+    setCreator(res.data);
 
 
   };
 
 
 
-  const deleteNft = async (id) => {
-    await axios.delete(`http://localhost:3030/creators${id}`)
+  const deleteCreator = async (id) => {
+    await axios.delete(`http://localhost:3030/creators/${id}`)
     loadCreator()
-    alert("You have update it!")
+    alert("You have delete it!")
     window.location.reload(true);
   }
 
@@ -79,10 +80,11 @@ function Topcreator() {
 
                 <div className='pics' key={index}>
                   <div className='sizeofimage'>
-                    <img className="nft-img" src={`http://localhost:3030/creators${item.bckgrndimg}`} alt="img" />
+                    
+                    <img className="nft-img" src={`http://localhost:3030/creators/${item.bckgrndimg}`} alt="backgroundImage" />
                     <br />
                   </div>
-                  <img className="nft-img" src={`http://localhost:3030/creators${item.creatorimg}`} alt="img" />
+                  <img className="nft-img" src={`http://localhost:3030/creators/${item.creatorimg}`} alt="creatorImage" />
                   <div className='infopart'>
                     <div className='creator'>
                       <p className='firstpart-creator' > {item.creatorName}</p>
@@ -91,7 +93,7 @@ function Topcreator() {
                     <div className='names' >
                       {item.description}
                     </div>
-                    <button className=' button collection-button' onClick={() => deleteNft(item._id)} >Delete</button>
+                    <button className=' button collection-button' onClick={() => deleteCreator(item._id)} >Delete</button>
 
                   </div>
 
