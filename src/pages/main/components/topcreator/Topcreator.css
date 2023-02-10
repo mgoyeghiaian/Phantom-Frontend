@@ -1,1 +1,11 @@
 /*Top Creators Section For The Main page  Styleing*/
+
+button.collection-button:disabled {
+  background: transparent;
+  color: #f7f0f0;
+  cursor: default;
+}
+
+button.collection-button:disabled:hover {
+  border-color: #B75CFF;
+}

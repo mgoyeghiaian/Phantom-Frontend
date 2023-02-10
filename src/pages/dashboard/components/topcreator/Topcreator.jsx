@@ -1,9 +1,8 @@
 import React from 'react'
 import '../collection/Collection.css'
+import './Topcreator.css'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useParams } from 'react-router-dom'
-
 function Topcreator() {
 
   const [creatorName, setCreatorName] = useState("");
@@ -12,7 +11,6 @@ function Topcreator() {
   const [bckgrndimg, setBckgrndimg] = useState(null);
   const [data, setCreator] = useState([])
 
-  const { id } = useParams();
 
 
   useEffect(() => {
@@ -62,7 +60,7 @@ function Topcreator() {
       <div className='colle'>
         Top Creator<br />
         <p className='desc'>Lorem ipsum dolor sit amet, consectetur <br />adipiscing elit.</p>
-        <a href='#form'>
+        <a href='#formcreators'>
           <button className=' button coll-btn' >Add</button>
         </a>
 
@@ -79,7 +77,7 @@ function Topcreator() {
                     <img className="nft-img" src={`http://localhost:3030/creators/${item.bckgrndimg}`} alt="backgroundImage" />
                     <br />
                   </div>
-                  <img className="nft-img" src={`http://localhost:3030/creators/${item.creatorimg}`} alt="creatorImage" />
+                  <img className="creator-img" src={`http://localhost:3030/creators/${item.creatorimg}`} alt="creatorImage" />
                   <div className='infopart'>
                     <div className='creator'>
                       <p className='firstpart-creator' > {item.creatorName}</p>
@@ -100,11 +98,11 @@ function Topcreator() {
 
         }
       </div>
-      <div className='formm' id='form'>
+      <div className='formm creators-form' id='formcreators'>
         <br />
         <br />
 
-        <form className='first-form' onSubmit={handleSubmit}>
+        <form className='first-form ' onSubmit={handleSubmit}>
           <br />
           <legend className='legendd'>Add Creator</legend>
           <br />
@@ -124,7 +122,7 @@ function Topcreator() {
           <label id="nft-img" >background Image: <br /><input
             type="file"
             id="imgg"
-            onChange={(e) => setCreatorimg(e.target.files[0])}
+            onChange={(e) => setBckgrndimg(e.target.files[0])}
           />
           </label>
           <br />
@@ -133,14 +131,13 @@ function Topcreator() {
             <input
               id="imgg"
               type="file"
-              onChange={(e) => setBckgrndimg(e.target.files[0])}
+              onChange={(e) => setCreatorimg(e.target.files[0])}
             />
           </label>
           <br />
           <input type="submit" value="Submit" id="submit" className='button'></input>
           <br />
           <br />
-
         </form>
       </div >
     </>

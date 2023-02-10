@@ -44,7 +44,7 @@ function Login() {
        */
       const { token } = await response.json();
       //Set Timing For The Cookie
-      const time = new Date(new Date().getTime() + 30 * 60 * 1000)
+      const time = new Date(new Date().getTime() + 15 * 60 * 1000)
 
       /** set cookie */
       Cookies.set('jwt_auth', token, {
