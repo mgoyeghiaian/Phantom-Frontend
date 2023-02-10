@@ -1,1 +1,35 @@
 /*Cta Section For The Main page  Styleing*/
+.cta-box {
+  margin-top: 75px;
+  display: block;
+  width: 85%;
+  height: 200px;
+  background: -webkit-linear-gradient(-15deg, #b75cff, #671ae4);
+  border: 1px solid #671ae4;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: white;
+   align-items: center;
+   border-radius: 10px;
+}
+.cta-button {
+  height: 50px;
+  width: 120px;
+  border-radius: 10px;
+  border:1px solid   #671AE4 ;
+  background-color: #c198f6;
+  color: white;
+  cursor: pointer;
+ 
+}
+.cta-button:hover{
+     background: -webkit-linear-gradient(-15deg, #B75CFF , #671AE4 );
+  border-radius: 10px;
+  border-color: #050108eb ;
+  color: rgba(223, 210, 210, 0.904);
+  font-size: 20px;
+  line-height: 20px;
+    width: 120px;
+  cursor: pointer;
+}

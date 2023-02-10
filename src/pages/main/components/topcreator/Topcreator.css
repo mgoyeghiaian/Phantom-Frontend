@@ -1,1 +1,50 @@
 /*Top Creators Section For The Main page  Styleing*/
+
+button.collection-button:disabled {
+  background: transparent;
+  color: #f7f0f0;
+  cursor: default;
+}
+
+button.collection-button:disabled:hover {
+  border-color: #B75CFF;
+}
+
+.mappingdata{
+  display: grid;
+   gap: 40px ; 
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px;
+  /* height: 100%; */
+  margin: auto auto;
+  width: 80%;}
+.creator-pics{
+  height: 50% !important;
+}
+.topcreatorbg-img{
+width: 100% !important; 
+  align-content: center !important;
+}
+.creator-img{ 
+  border-radius: 60% !important;
+  width: 150px !important;
+  align-content: center !important;
+  align-items: center !important;
+margin-top: -125px;
+}
+.creator-name {
+  text-align: center !important;
+  color: white !important;
+  font-weight: normal;
+  font-size:20px;
+  line-height: 30px;
+
+
+}
+.creator-bio{
+  text-align: center !important;
+  opacity: 0.5;
+   font-size:20px;
+  line-height: 30px;
+}
+
