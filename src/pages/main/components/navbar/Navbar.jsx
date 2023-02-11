@@ -22,8 +22,8 @@ const Navbar = () => {
         <a href="#collection">Collections</a>
         <a href="#featuredartworks">Feature</a>
         <a href="#faq">FAQ</a>
-        <a href={'/login'}>
-          <button className='button Login'> Login</button></a>
+        <Link to={'/login'}>
+          <button className='button Login'> Login</button></Link>
       </div>
       <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(!isOpen)}>
         <HiMenu />

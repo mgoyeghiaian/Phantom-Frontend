@@ -55,7 +55,7 @@ function Login() {
       }
       );
       /** redirect to dashboard page */
-      window.location.replace('dashboard');
+      window.location.href = '/dashboard';
 
 
     } catch (error) {
