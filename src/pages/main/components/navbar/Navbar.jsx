@@ -22,7 +22,7 @@ const Navbar = () => {
         <a href="#collection">Collections</a>
         <a href="#featuredartworks">Feature</a>
         <a href="#faq">FAQ</a>
-        <Link to={'/login'}>
+        <Link to={'/dashboard'}>
           <button className='button Login'> Login</button></Link>
       </div>
       <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(!isOpen)}>

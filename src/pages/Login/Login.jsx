@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useEffect } from "react";
 import Cookies from 'js-cookie';
 import './login.css'
-import { Navigate } from "react-router-dom";
 function Login() {
 
 
