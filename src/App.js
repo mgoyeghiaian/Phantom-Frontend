@@ -1,10 +1,10 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import Main from './pages/main/Main'
 import Login from './pages/Login/Login'
 import Privetroute from './pages/Login/Privetrout';
-import Dashboard from './pages/dashboard/Dashboard.jsx'
+import Dashboard from './pages/dashboard/Dashboard'
 import RingLoader from 'react-spinners/RingLoader'
 import Logo from '../src/assets/websiteicon/PHANTOM (2).svg'
 
@@ -34,7 +34,7 @@ function App() {
               size={55}
               speedMultiplier={1.1}
             /> </div> :
-          <BrowserRouter>
+          <HashRouter>
             <Routes>
               <Route path='/' element={<Main />} exact />
               <Route path='/login' element={<Login />} />
@@ -44,7 +44,7 @@ function App() {
                 </Privetroute>
               } />
             </Routes>
-          </BrowserRouter>
+          </HashRouter>
       }
     </>
   );

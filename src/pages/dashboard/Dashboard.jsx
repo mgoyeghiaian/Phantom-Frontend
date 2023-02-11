@@ -6,12 +6,12 @@ import './dashboard.css'
 
 function Dashboard() {
   return (
-    <>
+    <div>
       <AddUser />
       <section><Collection /></section>
       <section><FeaturedArtworks /></section>
       <section><Topcreator /></section>
-    </>
+    </div>
   )
 }
 
