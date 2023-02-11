@@ -7,7 +7,6 @@ import { useParams } from "react-router-dom";
 
 function Collection({ match }) {
 
-  const { id } = useParams();
 
   const [collection, setCollection] = useState('art');
   const [nftCollection, postNft] = useState("")

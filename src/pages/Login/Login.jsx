@@ -56,7 +56,7 @@ function Login() {
       }
       );
       /** redirect to dashboard page */
-      window.location.href = "/dashboard";
+      window.location.replace("/dashboard");
 
     } catch (error) {
       setErrorMessage('wrong username or password', error);
