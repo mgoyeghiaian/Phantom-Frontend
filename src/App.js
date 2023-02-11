@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Main from './pages/main/Main'
 import Login from './pages/Login/Login'
 import Privetrout from './pages/Login/Privetrout';
-import Dashboard from './pages/dashboard/Dashboard'
+import Dashboard from './pages/dashboard/Dashboard.jsx'
 import RingLoader from 'react-spinners/RingLoader'
 import Logo from '../src/assets/websiteicon/PHANTOM (2).svg'
 

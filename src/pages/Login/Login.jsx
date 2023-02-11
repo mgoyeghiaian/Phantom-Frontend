@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import Cookies from 'js-cookie';
 import './login.css'
-
+import { Navigate } from "react-router-dom";
 function Login() {
 
 
@@ -56,7 +56,8 @@ function Login() {
       }
       );
       /** redirect to dashboard page */
-      window.location.replace("/dashboard");
+      window.location.replace('/');
+
 
     } catch (error) {
       setErrorMessage('wrong username or password', error);
