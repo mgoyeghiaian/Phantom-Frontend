@@ -5,12 +5,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   min-height: 98vh;
 }
 
 .wrapper{
   box-sizing: border-box;
-
   position: relative;
   width: 400px;
   height: 500px;
@@ -116,4 +116,12 @@ font-weight: 500;
   background-color: #0000005b;
   font-size: 14px;
   font-weight: 500;
+}
+@media screen and (max-width: 425px) {
+  
+  .input-group input{
+    width: 50%;}
+  .wrapper{
+    width: 95%;
+  }
 }

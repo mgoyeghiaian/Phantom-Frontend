@@ -100,17 +100,11 @@ justify-content: center;
   }
 
   @media screen and (max-width : 950px) {
-
-    .Home-button-dash
-{
-
-  margin-left: 5px;
-}
-
+    
     .adduser{
       display: flex;
       flex-direction: column;
-    height: 240px;
+    height: 280px;
     justify-content: center;
     }
 
@@ -120,20 +114,31 @@ justify-content: center;
     .adduser-form{
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: 2px;
       align-items: center;
     }
 
     .adduser-form input{
       color: rgba(232, 224, 224, 0.637);
       background-color: #a9a0b159;
-      width: 210px;
+      width: 75%;
       border-radius: 15px;
       height: 24px;
+      margin-bottom: 7px;
       }
 
     div .error-dash p{
       display: flex;
   }
+  }
+  @media screen and (max-width : 425px) {
+    .error-dash{
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+font-size: 95%;  }
+    .adduser h2{
+    display: none;
+    }
   }
  

@@ -132,12 +132,15 @@ margin-bottom: 250px;
   }
 
   .about-img img {
-    width: 419px;
-    height: 624px;
+    width: 97%;
+    align-self: center;
+    height: 90%;
     border-radius: 0px;
   }
 
   .about-img {
+    display: flex;
+    justify-content: center;
     grid-row-start: 3;
   }
   .about-button {
