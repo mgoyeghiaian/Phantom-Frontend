@@ -12,18 +12,20 @@ import Footer from './components/footer/Footer.jsx'
 
 function Main() {
   return (
-    <div className='main' >
-      <Navbar />
-      <section id='home'><Home /></section>
-      <section id='sponsored'><Sponsored /></section>
-      <section id='about'> <About /></section>
-      <section id='collection'><Collection /></section>
-      <section id='featuredartworks'><FeaturedArtworks /></section>
-      <section id='topcreator'><Topcreator /></section>
-      <section id='faq'><FAQ /></section>
-      <section id='cta'><CTA /></section>
-      <section id='footer'><Footer /></section>
-    </div>
+    <body>
+      <div className='main' >
+        <Navbar />
+        <section id='home'><Home /></section>
+        <section id='sponsored'><Sponsored /></section>
+        <section id='about'> <About /></section>
+        <section id='collection'><Collection /></section>
+        <section id='featuredartworks'><FeaturedArtworks /></section>
+        <section id='topcreator'><Topcreator /></section>
+        <section id='faq'><FAQ /></section>
+        <section id='cta'><CTA /></section>
+        <section id='footer'><Footer /></section>
+      </div>
+    </body>
   )
 }
 

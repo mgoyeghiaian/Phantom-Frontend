@@ -99,7 +99,8 @@ function Login() {
   }, [errorMessage]);
 
   return (
-    <>
+
+    <body>
       <div className="login-body">
         <div className="wrapper">
           <div className="form-wrapper">
@@ -125,7 +126,7 @@ function Login() {
           </div>
         </div>
       </div>
-    </>
+    </body>
 
   )
 }
