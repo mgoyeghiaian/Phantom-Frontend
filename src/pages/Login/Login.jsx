@@ -50,7 +50,7 @@ function Login() {
         expires: time,
         secure: true,
         sameSite: "Strict",
-        path: '#/'
+        path: '/'
 
       }
       );

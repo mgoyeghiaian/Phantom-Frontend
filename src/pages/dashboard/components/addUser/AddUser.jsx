@@ -62,9 +62,9 @@ function AddUser() {
   return (
     <>
       <div className='adduser'>
-        <Link to={'/'} className='Home-button-dash'>
+        <a href='/' className='Home-button-dash'>
           <HiHome />
-        </Link>
+        </a>
         <h2>Add New User:</h2>
         {errorMessage && <p className='error-dash' > {errorMessage}</p>}
         {message && <p className='sucsess-dash'>{message}</p>}
