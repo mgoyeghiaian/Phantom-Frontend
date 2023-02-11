@@ -21,14 +21,20 @@
    
   
 }
-  .nft-img{
+.nft-img{
 
-width: 337px;
-/* height: 380px; */
-border-radius: 10px;
-
-
-}   
+    width: 350px !important;
+    /* height: 380px; */
+    border-radius: 10px;
+    
+    
+    } 
+    
+    .sizeofimage{
+        width: 150px;
+        height: 150px;
+        padding-left: 12%;
+    }   
 
 .pics{
     width: 100%;
@@ -340,6 +346,9 @@ width:600px;
 
             #nft-img{
                 margin-left: 20px;
+             }
+             .nft-img{
+                width:250px !important;
              }
            
 }
