@@ -12,7 +12,6 @@ import Footer from './components/footer/Footer.jsx'
 
 function Main() {
   return (
-    <body>
       <div className='main' >
         <Navbar />
         <section id='home'><Home /></section>
@@ -25,7 +24,6 @@ function Main() {
         <section id='cta'><CTA /></section>
         <section id='footer'><Footer /></section>
       </div>
-    </body>
   )
 }
 
