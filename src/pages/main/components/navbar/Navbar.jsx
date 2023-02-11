@@ -22,8 +22,8 @@ const Navbar = () => {
         <a href="#collection">Collections</a>
         <a href="#featuredartworks">Feature</a>
         <a href="#faq">FAQ</a>
-        <Link to={'/dashboard'}>
-          <button className='button Login'> Login</button></Link>
+        <a href={'/login'}>
+          <button className='button Login'> Login</button></a>
       </div>
       <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(!isOpen)}>
         <HiMenu />
@@ -31,7 +31,7 @@ const Navbar = () => {
       <div className={`menuTimes ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(!isOpen)}>
         <FaTimes />
       </div>
-    </nav>
+    </nav >
   );
 };
 
