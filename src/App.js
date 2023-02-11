@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Main from './pages/main/Main'
 import Login from './pages/Login/Login'
-import Privetrout from './pages/Login/Privetrout';
+import Privetroute from './pages/Login/Privetrout';
 import Dashboard from './pages/dashboard/Dashboard.jsx'
 import RingLoader from 'react-spinners/RingLoader'
 import Logo from '../src/assets/websiteicon/PHANTOM (2).svg'
@@ -39,9 +39,9 @@ function App() {
               <Route path='/' element={<Main />} exact />
               <Route path='/login' element={<Login />} />
               <Route path="/dashboard" element={
-                <Privetrout>
+                <Privetroute >
                   <Dashboard />
-                </Privetrout>
+                </Privetroute>
               } />
             </Routes>
           </BrowserRouter>

@@ -1,6 +1,6 @@
 import { Navigate } from "react-router-dom"
 import Cookies from 'js-cookie';
-function Privetrout({ children }) {
+function Privetroute({ children }) {
 
   const token = Cookies.get('jwt_auth')
   /** Checking If theres token to take to the child */
@@ -17,4 +17,4 @@ function Privetrout({ children }) {
 
 
 }
-export default Privetrout
+export default Privetroute
