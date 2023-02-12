@@ -50,12 +50,12 @@ function Login() {
         expires: time,
         secure: true,
         sameSite: "Strict",
-        path: '/dashboard'
+        path: '/'
 
       }
       );
       /** redirect to dashboard page */
-      window.location.href = "/dashboard";
+      window.location.href = "#/dashboard";
 
 
     } catch (error) {
