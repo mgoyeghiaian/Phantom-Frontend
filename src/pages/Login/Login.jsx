@@ -50,12 +50,12 @@ function Login() {
         expires: time,
         secure: true,
         sameSite: "Strict",
-        path: '/'
+        path: '/dashboard'
 
       }
       );
       /** redirect to dashboard page */
-      window.location.href = "#/dashboard";
+      window.location.href = "/dashboard";
 
 
     } catch (error) {
@@ -111,7 +111,7 @@ function Login() {
                 <label htmlFor="username"> Username</label>
               </div>
               <div className="input-group" >
-                <input type='password' autoComplete="new-password"
+                <input type='password' autoComplete="off"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)} />
                 <label htmlFor="password"> Password</label>
