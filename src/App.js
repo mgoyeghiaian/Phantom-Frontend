@@ -34,7 +34,7 @@ function App() {
               size={55}
               speedMultiplier={1.1}
             /> </div> :
-          <BrowserRouter basename='/'>
+          <BrowserRouter basename='/Phantom'>
             <Routes >
               <Route path='/' element={<Main />} exact />
               <Route path='login' element={<Login />} />
