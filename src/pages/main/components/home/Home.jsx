@@ -22,7 +22,14 @@ function Home() {
         <img alt="Hero" src={Heroimg} />
       </div>
       <div className="hero-numbers">
-        <a href="#collection"> <button className="hero-button button">Explore</button></a>
+        <a
+
+          href="/" onClick={e => {
+            let collection = document.getElementById("collection");
+            e.preventDefault();
+            collection && collection.scrollIntoView();
+          }}
+        > <button className="hero-button button">Explore</button></a>
         <div className="lol">
           <div className="hero-artworks">
             <h1>37k+</h1>
@@ -38,7 +45,7 @@ function Home() {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 

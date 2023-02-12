@@ -19,9 +19,25 @@ const Navbar = () => {
       </div>
       <div className={`nav-right ${isOpen ? 'open' : ''}`}>
         <Searchbar />
-        <a href="#collection">Collections</a>
-        <a href="#featuredartworks">Feature</a>
-        <a href="#faq">FAQ</a>
+
+        <a href="/" onClick={e => {
+          let collection = document.getElementById("collection");
+          e.preventDefault();
+          collection && collection.scrollIntoView();
+        }}>Collections</a>
+
+
+        <a href="/" onClick={e => {
+          let featuredartworks = document.getElementById("featuredartworks");
+          e.preventDefault();
+          featuredartworks && featuredartworks.scrollIntoView();
+        }}>Feature</a>
+        <a
+          href="/" onClick={e => {
+            let faq = document.getElementById("faq");
+            e.preventDefault();
+            faq && faq.scrollIntoView();
+          }}>FAQ</a>
         <Link to={'/login'}>
           <button className='button Login'> Login</button></Link>
       </div>
