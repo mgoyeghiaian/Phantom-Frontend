@@ -132,7 +132,13 @@ function Collection({ match }) {
       <div className='colle'>
         Collection Dashboard<br />
         <p className='desc'>Lorem ipsum dolor sit amet, consectetur <br />adipiscing elit.</p>
-        <a href='#form'>
+        <a
+          href="/dashboard" onClick={e => {
+            let form = document.getElementById("form");
+            e.preventDefault();
+            form && form.scrollIntoView();
+          }}
+        >
           <button className=' button coll-btn' >Add</button>
         </a>
         <div className='navbar-nfts'>

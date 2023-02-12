@@ -18,17 +18,36 @@ function Footer() {
       </div>
       <div className='footer-about'>
         <h1> About</h1>
-        <a href='#collection'>Product</a>
-        <a href='#Res'>Resource</a>
-        <a href='#Term'>Term & Condition</a>
-        <a href='#faq'>FAQ</a>
+        <a
+          href="/" onClick={e => {
+            let collection = document.getElementById("collection");
+            e.preventDefault();
+            collection && collection.scrollIntoView();
+          }}
+        >Product</a>
+        <a href='/'>Resource</a>
+        <a href='/'>Term & Condition</a>
+        <a
+          href="/" onClick={e => {
+            let faq = document.getElementById("faq");
+            e.preventDefault();
+            faq && faq.scrollIntoView();
+          }}
+        >FAQ</a>
       </div>
       <div className='footer-company'>
         <h1>Company</h1>
-        <a href='#OurTeam'>Our Team</a>
-        <a href='#Partner'>Partner With Us</a>
-        <a href='#Privacy'>Privacy & Policy</a>
-        <a href='#featuredartworks'>Fratures</a>
+        <a href='/'>Our Team</a>
+        <a href='/'>Partner With Us</a>
+        <a href='/'>Privacy & Policy</a>
+        <a
+          href="/" onClick={e => {
+            let featuredartworks = document.getElementById("featuredartworks");
+            e.preventDefault();
+            featuredartworks && featuredartworks.scrollIntoView();
+          }}
+
+        >Fratures</a>
       </div>
       <div className='footer-contact' >
         <h1>Contact</h1>

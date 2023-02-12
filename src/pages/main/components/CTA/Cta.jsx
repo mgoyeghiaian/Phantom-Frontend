@@ -7,7 +7,13 @@ function Cta() {
       <h1>
         Get Ready To Collect <br /> Our Nfts
       </h1>
-      <button className="cta-button" onClick={""}>Get Started</button>
+      <a href="/" onClick={e => {
+        let collection = document.getElementById("collection");
+        e.preventDefault();
+        collection && collection.scrollIntoView();
+      }}>
+        <button className="cta-button">Get Started</button>
+      </a>
     </div>
   );
 }

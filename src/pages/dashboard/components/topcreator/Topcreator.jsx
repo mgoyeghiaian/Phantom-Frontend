@@ -60,7 +60,14 @@ function Topcreator() {
       <div className='colle'>
         Top Creator<br />
         <p className='desc'>Lorem ipsum dolor sit amet, consectetur <br />adipiscing elit.</p>
-        <a href='#formcreators'>
+        <a href="/dashboard" onClick={e => {
+          let formcreators = document.getElementById("formcreators");
+          e.preventDefault();
+          formcreators && formcreators.scrollIntoView();
+        }}
+
+
+        >
           <button className=' button coll-btn' >Add</button>
         </a>
 

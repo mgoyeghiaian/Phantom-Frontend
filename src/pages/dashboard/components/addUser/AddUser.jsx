@@ -1,6 +1,5 @@
 import React from 'react'
 import './AddUser.css'
-import { Link } from 'react-router-dom'
 import { HiHome } from "@react-icons/all-files/hi/HiHome";
 import { useState, useEffect } from "react";
 
@@ -18,7 +17,7 @@ function AddUser() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch("http://localhost:3030/signup", {
+      const response = await fetch("https://phantom-rk5i.onrender.com/signup", {
         method: 'POST',
         headers: ({ 'Content-Type': 'application/json' }),
         body: JSON.stringify({ username, password }),
