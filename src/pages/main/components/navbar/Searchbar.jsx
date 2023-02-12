@@ -45,7 +45,7 @@ const Searchbar = () => {
   };
 
   return (
-    <>
+    <div className='searh-body'>
       <form className='search-form'>
         <button className='search-button' type='submit' onClick={handleSectionClick}>
           <FaSearch />
@@ -73,7 +73,7 @@ const Searchbar = () => {
           </ul>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

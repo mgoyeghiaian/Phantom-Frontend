@@ -42,7 +42,7 @@
 
 
 .search-form{
-  width: 25%;
+  width: 100%;
   display: flex;
   align-items: center;
   background-color: rgba(140, 135, 135, 0.228);
@@ -90,9 +90,14 @@
   height: 45px;
 }
 
+
+.searh-body{
+  width: 30%;
+}
+
 .search-results {
   position: absolute;
-background-color: rgba(128, 128, 128, 0.418);
+background-color:transparent;
    width: 16%;
   max-height: 200px;
   overflow-y: scroll;
@@ -101,6 +106,7 @@ background-color: rgba(128, 128, 128, 0.418);
   box-shadow: 2px 2px 2px gray;
   z-index: 1;
 }
+
 
 .search-results ul {
   list-style: none;
@@ -141,6 +147,7 @@ width:100%;
   }
 
   .search-form{
+    width: 75%;
     display: flex;
     justify-content: center;
 background-color: rgba(140, 135, 135, 0.228);
@@ -175,7 +182,9 @@ background-color: rgba(140, 135, 135, 0.228);
       z-index: 2;
   }
 
-  
+  .searh-body{
+    width: 100%;
+  }
 .nav-right{
 align-content: center;
 position:absolute;
