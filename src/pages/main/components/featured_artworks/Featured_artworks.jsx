@@ -28,7 +28,7 @@ function Featured_artworks() {
       <br />
       <br />
       <div className='colle'>
-        Featured ArtWork Dashboard<br /><p className='desc'>Lorem ipsum dolor sit amet, consectetur <br />adipiscing elit.</p>
+        Featured ArtWork<br /><p className='desc'>Lorem ipsum dolor sit amet, consectetur <br />adipiscing elit.</p>
       </div>
       {
         <div className='mappingdata'>
