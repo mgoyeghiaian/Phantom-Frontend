@@ -35,37 +35,37 @@ function Topcreator() {
         <div className="mappingdata">
           {data.map((item, index) => {
             return (
-              <div className=" pics" key={index}>
+              <div className=" pics creator-body" key={index}>
                 <div className="info-parts">
-                <div className="creator-pics">
-                  <img
-                    className="topcreatorbg-img nft-img"
-                    src={`https://phantom-rk5i.onrender.com/creators/${item.bckgrndimg}`}
-                    alt="backgroundImage"
-                  />
-                  <br />
+                  <div className="creator-pics">
+                    <img
+                      className="topcreatorbg-img "
+                      src={`https://phantom-rk5i.onrender.com/creators/${item.bckgrndimg}`}
+                      alt="backgroundImage"
+                    />
+                    <br />
 
-                  <img
-                    className="nft-img creator-img"
-                    src={`https://phantom-rk5i.onrender.com/creators/${item.creatorimg}`}
-                    alt="creatorImage"
-                  />
-                </div>
-                <div className="creator-name ">
-                  {item.creatorName}
+                    <img
+                      className=" creator-img"
+                      src={`https://phantom-rk5i.onrender.com/creators/${item.creatorimg}`}
+                      alt="creatorImage"
+                    />
+                  </div>
+                  <div className="creator-name ">
+                    {item.creatorName}
 
-                  <div className="creator-bio">{item.description}</div>
-                </div>
-                <button
-                  className="creator-button button  collection-button"
-                  disabled={followedCreators.includes(item._id)}
-                  onClick={() => followCreator(item._id)}
-                >
-                  {followedCreators.includes(item._id)
-                    ? "Followed"
-                    : "+ Follow"}
-                </button>
-              </div></div>
+                    <div className="creator-bio">{item.description}</div>
+                  </div>
+                  <button
+                    className="creator-button button  collection-button"
+                    disabled={followedCreators.includes(item._id)}
+                    onClick={() => followCreator(item._id)}
+                  >
+                    {followedCreators.includes(item._id)
+                      ? "Followed"
+                      : "+ Follow"}
+                  </button>
+                </div></div>
             );
           })}
         </div>

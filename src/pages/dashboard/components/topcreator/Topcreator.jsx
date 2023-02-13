@@ -75,31 +75,34 @@ function Topcreator() {
 
           <div className='mappingdata'>
             {data.map((item, index) => {
-
               return (
 
-                <div className='pics' key={index}>
-                  <div className='sizeofimage'>
+                <div className=" pics  creator-body" key={index}>
+                  <div className="info-parts">
+                    <div className="creator-pics">
+                      <img
+                        className="topcreatorbg-img "
+                        src={`https://phantom-rk5i.onrender.com/creators/${item.bckgrndimg}`}
+                        alt="backgroundImage"
+                      />
+                      <br />
 
-                    <img className="nft-img" src={`https://phantom-rk5i.onrender.com/creators/${item.bckgrndimg}`} alt="backgroundImage" />
-                    <br />
-                  </div>
-                  <img className="creator-img" src={`https://phantom-rk5i.onrender.com/creators/${item.creatorimg}`} alt="creatorImage" />
-                  <div className='infopart'>
-                    <div className='creator'>
-                      <p className='firstpart-creator' > {item.creatorName}</p>
+                      <img
+                        className=" creator-img"
+                        src={`https://phantom-rk5i.onrender.com/creators/${item.creatorimg}`}
+                        alt="creatorImage"
+                      />
                     </div>
+                    <div className="creator-name ">
+                      {item.creatorName}
 
-                    <div className='names' >
-                      {item.description}
+                      <div className="creator-bio">{item.description}</div>
                     </div>
                     <button className=' button collection-button' onClick={() => deleteCreator(item._id)} >Delete</button>
-
-                  </div>
-
-                </div>
+                  </div></div>
               )
             })}
+
           </div>
 
 

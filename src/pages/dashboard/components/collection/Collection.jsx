@@ -1,5 +1,5 @@
 import React from 'react'
-import './Collection.css'
+import "./Collection.css"
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from "react-router-dom";
@@ -171,7 +171,11 @@ function Collection({ match }) {
                     <div className='names' >
                       {item.nftName}
                     </div>
-                    <a href='#form'>
+                    <a href="/dashboard" onClick={e => {
+                      let form = document.getElementById("form");
+                      e.preventDefault();
+                      form && form.scrollIntoView();
+                    }}>
                       <button className=' button collection-button' onClick={() => loadNftbyId(item._id)} >Update</button>
                     </a>
                     <button className=' button collection-button' onClick={() => deleteNft(item._id)} >Delete</button>

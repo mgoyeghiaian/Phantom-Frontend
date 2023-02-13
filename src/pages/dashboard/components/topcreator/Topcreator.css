@@ -1,7 +1,57 @@
 /*Top Creator  Section For The Dashboard Styleing*/
 .creators-form{
   justify-content: center ;
+  margin-right: 10%;
 }
-.creator-img{
- 
+/*Top Creators Section For The Main page  Styleing*/
+
+button.collection-button:disabled {
+  background: transparent;
+  color: #f7f0f0;
+  cursor: default;
+}
+
+button.collection-button:disabled:hover {
+  border-color: #B75CFF;
+}
+
+.creator-pics{
+  height: 420px;
+}
+
+.creator-img{ 
+ position: relative;
+ top: -150px;
+
+}
+.creator-name {
+  text-align: center !important;
+  color: white !important;
+  font-weight: normal;
+  font-size:20px;
+  line-height: 30px;
+
+
+}
+.creator-bio{
+  text-align: center !important;
+  opacity: 0.5;
+   font-size:20px;
+  line-height: 30px;
+}
+
+@media screen and (max-width: 425px) {
+  .creator-body{
+    width: 85% !important;
+  }
+
+  .topcreatorbg-img{
+    width: 100%!important;
+  }
+.creator-pics{
+  height: 320px !important;
+}
+  .creator-img{ 
+    right: 15px;
+   }
 }

@@ -11,7 +11,8 @@
     color: rgba(255, 255, 255, 0.464);
 }
 .mappingdata{
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
    gap: 40px ; 
   grid-template-columns: 1fr 1fr 1fr;
   padding: 10px;
@@ -21,14 +22,6 @@
    
   
 }
-.nft-img{
-
-    width: 350px !important;
-    /* height: 380px; */
-    border-radius: 10px;
-    
-    
-    } 
     
     .sizeofimage{
         width: 150px;
@@ -37,7 +30,7 @@
     }   
 
 .pics{
-    width: 100%;
+    width: 450px;
     height: 100%;
     background-color: #2f3454;
     padding: 10px;
@@ -98,6 +91,7 @@ display: flex;
 .collection-button{
     width: 70%;
     height: 7%;
+    margin-bottom: 3%;
 }
 .desc{
     font-size: 20px;
@@ -106,7 +100,7 @@ display: flex;
 .navbar-nfts{
     display: flex;
     flex-direction: row;
-    margin-left: 25px;
+    margin-left: 5px;
     
 }
 .btn1{
@@ -347,8 +341,6 @@ width:600px;
             #nft-img{
                 margin-left: 20px;
              }
-             .nft-img{
-                width:250px !important;
-             }
+             
            
 }

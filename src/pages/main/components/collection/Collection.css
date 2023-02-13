@@ -14,20 +14,18 @@
    gap: 40px ; 
   grid-template-columns: 1fr 1fr 1fr;
   padding: 10px;
-  /* height: 100%; */
   margin: auto auto;
-  width: 80%;
+  width: 85%;
    
   
 }
   .nft-img{
-
-width: 230px !important;
-/* height: 380px; */
+    align-items: flex-start;
+    margin-top: 2%;
+width: 100%;
 border-radius: 10px;
-
-
 } 
+
 
 .sizeofimage{
     width: 150px;
@@ -56,14 +54,7 @@ display: flex;
 
 }
 
-.pics {
-  width: 100%;
-  height: 100%;
-  background-color: #2f3454;
-  padding: 20px;
-  text-align: center;
-  border-radius: 10px;
-}
+
 .names {
   color: white;
   display: flex;
@@ -113,11 +104,8 @@ display: flex;
 }
 .navbar-nfts {
   display: flex;
-  justify-content: space-between;
-  width: 97%;
-  margin: 0 auto;
-  padding: 10px;
-  grid-column-gap: 20px;
+  width: 99%;
+  margin-bottom: 15px;
 }
 .btn1 {
   border-radius: 10px;
@@ -195,9 +183,7 @@ display: flex;
     font-size: 20px;
     color: white;
 }
-.navbar-nfts{
-    display: flex;
-}
+
 .btn1{
 
     border-radius: 10px;
@@ -273,17 +259,13 @@ display: flex;
 
 @media screen and (max-width: 768px) {
 
-  .pics{
-    width: 390px;}
-
-
   .navbar-nfts {
     display: flex;
-    justify-content: space-around;
-    width: 90%;
-    padding: 10px;
-    grid-column-gap: 10px;
+    width: 99%;
+    margin-bottom: 15px;
   }
+
+
 
     .mappingdata{
         display: grid;
@@ -291,7 +273,7 @@ display: flex;
         grid-template-columns: 1fr ;
         padding: 10px;
         margin: auto auto;
-        width: 100%;
+        width: 95%;
       }
     .btn4{
         border-radius: 10px;
@@ -380,6 +362,19 @@ display: flex;
                 width: 35%;
             }
              .nft-img{
-              width:250px !important;
+              width: 175% !important;
+              align-items: center;
+              justify-content: center;
             } 
 }
+@media screen and (max-width: 425px) {
+  .nft-img{
+    width: 150% !important;
+    height: 200% !important;
+    align-items: center;
+    justify-content: center;
+
+  } 
+}
+
+

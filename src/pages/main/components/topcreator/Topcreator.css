@@ -10,27 +10,13 @@ button.collection-button:disabled:hover {
   border-color: #B75CFF;
 }
 
-.mappingdata{
-  display: grid;
-   gap: 40px ; 
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 10px;
-  /* height: 100%; */
-  margin: auto auto;
-  width: 80%;}
 .creator-pics{
-  height: 50% !important;
+  height: 420px;
 }
-.topcreatorbg-img{
-width: 100% !important; 
-  align-content: center !important;
-}
+
 .creator-img{ 
-  border-radius: 60% !important;
-  width: 150px !important;
-  align-content: center !important;
-  align-items: center !important;
-margin-top: -125px;
+ position: relative;
+ top: -150px;
 }
 .creator-name {
   text-align: center !important;
@@ -48,3 +34,24 @@ margin-top: -125px;
   line-height: 30px;
 }
 
+@media screen and (max-width: 768px) {
+  .pics{
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .creator-body{
+    width: 85% !important;
+  }
+
+  .topcreatorbg-img{
+    width: 100%!important;
+  }
+.creator-pics{
+  height: 320px !important;
+}
+  .creator-img{ 
+    right: 15px;
+   }
+}
