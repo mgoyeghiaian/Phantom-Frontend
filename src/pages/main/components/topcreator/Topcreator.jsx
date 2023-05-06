@@ -47,7 +47,7 @@ function Topcreator() {
 
                     <img
                       className=" creator-img"
-                      src={`https://phantom-rk5i.onrender.com/creators/${item.creatorimg}`}
+                      src={`'https://phantom-rk5i.onrender.com/creators/'${item.creatorimg}`}
                       alt="creatorImage"
                     />
                   </div>

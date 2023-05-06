@@ -58,14 +58,14 @@ transition: .5s;
 }
 
 .input-group input{
-width: 320px;
-height: 40px;
-font-size: 16px;
-color: #fff;
-padding: 0 5px;
-border: none;
-outline: none;
-background: transparent;
+  width: 320px;
+  height: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 0 5px;
+  border: none;
+  outline: none;
+  background: transparent;
 }
 .input-group input:hover~label,
 .input-group input.has-value + label {

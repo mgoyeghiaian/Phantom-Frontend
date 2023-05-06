@@ -3,7 +3,7 @@ import "./Faq.css";
 import faquestions from "./faq";
 import faquestionsTwo from "./faq2";
 
-function Faq() {
+function Faq() { 
   const [openAnswerIndex, setOpenAnswerIndex] = useState(-1);
   const [rightOpenAnswerIndex, setRightOpenAnswerIndex] = useState(-1);
   return (
